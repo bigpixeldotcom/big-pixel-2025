@@ -2,6 +2,10 @@ import '@/styles/base.css'
 import type { Metadata } from 'next'
 import { Inter, Tourney } from 'next/font/google'
 
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+config.autoAddCss = false
+
 const interSans = Inter({
   variable: '--font-inter',
   subsets: ['latin'],
