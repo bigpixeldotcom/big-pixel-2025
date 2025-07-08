@@ -38,7 +38,7 @@ export default function Header() {
             href="/contact"
             className="rounded-full border-2 border-grey-700 bg-black/30 px-4 py-3 text-grey-100 transition-colors duration-200 ease-in-out hover:border-yellow hover:bg-black/60 hover:text-yellow"
           >
-            Contact Me
+            Contact Us
           </Link>
           <button
             className="size-12 cursor-pointer rounded-full bg-grey-700 text-xl text-white transition-colors duration-200 ease-in-out hover:bg-grey-600"
@@ -54,7 +54,7 @@ export default function Header() {
         animate={isOpen ? 'open' : 'closed'}
         variants={variants}
         transition={{ duration: 0.3, ease: 'easeInOut', type: 'spring', stiffness: 200, restDelta: 2 }}
-        className="overflow-hidden bg-grey-800 shadow-inner"
+        className="overflow-hidden bg-spline-grey shadow-inner"
       >
         <div className="p-4 lg:p-8">
           <Navigation />

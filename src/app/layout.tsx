@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://big-pixel.com'),
   title: {
     template: '%s - Big Pixel',
-    default: 'Big Pixel',
+    default: 'Big Pixel | Web Design Agency in Norfolk',
   },
   description:
     'Big Pixel helps brands grow with custom websites built for speed, impact, and scale — combining sleek design with the latest web technology.',
