@@ -8,6 +8,7 @@ import {
 } from '@awesome.me/kit-89a9106b13/icons/classic/regular'
 import type { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import clsx from 'clsx'
 import { motion, Variants } from 'motion/react'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
@@ -19,6 +20,7 @@ type WorkType = {
   url: string
   cta: string
   intro: string
+  colour: string
 }
 
 const workTypes: WorkType[] = [
@@ -30,6 +32,7 @@ const workTypes: WorkType[] = [
     cta: 'Learn more about our web design services',
     intro:
       'Beautiful, user-first websites designed to captivate your audience and deliver results — whether you’re a startup or a global brand.',
+    colour: 'bg-green',
   },
   {
     id: 2,
@@ -39,6 +42,7 @@ const workTypes: WorkType[] = [
     cta: 'Learn more about our web development services',
     intro:
       'We don’t just make it look good—we build it to work. Secure, scalable web development tailored to your business goals. From CMS-driven sites to custom apps and ecommerce.',
+    colour: 'bg-blue',
   },
   {
     id: 3,
@@ -48,6 +52,7 @@ const workTypes: WorkType[] = [
     cta: 'Learn all about our branding and design services',
     intro:
       'With decades in print and digital, we create memorable brand identities and supporting materials that elevate your message.',
+    colour: 'bg-purple',
   },
   {
     id: 4,
@@ -57,6 +62,7 @@ const workTypes: WorkType[] = [
     cta: 'Learn more about how we can help with your digital strategy',
     intro:
       'We collaborate directly with your team—from marketing heads to founders—to deliver end-to-end creative support.',
+    colour: 'bg-orange',
   },
 ]
 
@@ -134,13 +140,16 @@ export default function RollingIcons() {
       {workTypes.map((type) => (
         <div key={type.id} className="flex flex-col items-center gap-2 text-center">
           <motion.div
-            className="flex size-32 items-center justify-center rounded-full bg-blue text-5xl text-white shadow-lg shadow-black/30"
+            className={clsx(
+              'flex size-32 items-center justify-center rounded-full text-5xl text-white shadow-lg shadow-black/30',
+              type.colour
+            )}
             variants={circleVariants}
           >
             <FontAwesomeIcon icon={type.icon} fixedWidth />
           </motion.div>
-          <motion.div className="flex min-h-64 flex-col justify-between gap-4" variants={textVariants}>
-            <h4 className="mt-2 font-mono text-xl font-black text-yellow">{type.title}</h4>
+          <motion.div className="mt-6 flex min-h-64 flex-col justify-between gap-2" variants={textVariants}>
+            <h4 className="font-mono text-xl font-black text-yellow">{type.title}</h4>
             <p className="text-white">{type.intro}</p>
             <Link
               className="rounded bg-grey-800 px-2 py-1.5 text-white transition-colors duration-200 ease-out hover:bg-black"

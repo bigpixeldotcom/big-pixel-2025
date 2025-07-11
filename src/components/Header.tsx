@@ -6,6 +6,7 @@ import { motion, Variants } from 'motion/react'
 import Link from 'next/link'
 import { useState } from 'react'
 import Navigation from './Navigation'
+import XIcon from './XIcon'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -36,12 +37,12 @@ export default function Header() {
         <div className="flex items-center justify-center gap-4">
           <Link
             href="/contact"
-            className="rounded-full border-2 border-grey-700 bg-black/30 px-4 py-3 text-grey-100 transition-colors duration-200 ease-in-out hover:border-yellow hover:bg-black/60 hover:text-yellow"
+            className="rounded-full border-2 border-white/60 bg-white/10 px-4 py-3 text-white/80 transition-colors duration-200 ease-in-out hover:border-white hover:bg-black/30 hover:text-white"
           >
             Contact Us
           </Link>
           <button
-            className="size-12 cursor-pointer rounded-full bg-grey-700 text-xl text-white transition-colors duration-200 ease-in-out hover:bg-grey-600"
+            className="size-12 cursor-pointer rounded-full bg-white/20 text-xl text-white transition-colors duration-200 ease-in-out hover:bg-black/30"
             onClick={() => setIsOpen(!isOpen)}
           >
             <FontAwesomeIcon icon={isOpen ? faXmark : faBars} fixedWidth />
@@ -57,6 +58,7 @@ export default function Header() {
         className="overflow-hidden bg-spline-grey shadow-inner"
       >
         <div className="p-4 lg:p-8">
+          <XIcon />
           <Navigation />
         </div>
       </motion.header>

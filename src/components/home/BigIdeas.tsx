@@ -4,9 +4,9 @@ import Ipad from '@/components/Ipad'
 
 export default function BigIdeas() {
   return (
-    <div className="flex h-screen w-full items-center overflow-x-clip bg-yellow">
+    <div className="flex min-h-screen w-full items-center overflow-x-clip bg-yellow">
       <Container>
-        <div className="flex flex-col items-center gap-12 lg:flex-row">
+        <div className="mt-16 flex flex-col items-center gap-12 lg:flex-row">
           <div className="flex flex-col gap-4">
             <h2 className="font-mono text-6xl font-black text-red lg:text-8xl">Big Ideas Deserve a Big Impact</h2>
             <h3 className="mt-2 text-xl font-semibold lg:text-3xl">

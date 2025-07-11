@@ -33,6 +33,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="antialiased">
+      <head>
+        <meta name="apple-mobile-web-app-title" content="Big Pixel" />
+      </head>
       <body className={`${interSans.variable} ${tourneyHeader.variable}`}>{children}</body>
     </html>
   )

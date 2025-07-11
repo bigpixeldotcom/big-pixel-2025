@@ -37,21 +37,24 @@ export default function Navigation() {
   }
 
   return (
-    <motion.ul className="mt-22 grid grid-cols-1 gap-4 lg:grid-cols-3 2xl:grid-cols-5" variants={navVariants}>
+    <motion.ul className="mt-10 grid grid-cols-1 gap-4 lg:grid-cols-3 2xl:grid-cols-5" variants={navVariants}>
       {navigation.map((item) => (
         <motion.li key={item.id} variants={itemVariants}>
           <Link href={item.value}>
             <div
               className={clsx(
-                'w-full rounded-md border-2 p-4 transition-colors duration-200 ease-out hover:bg-black/20',
-                item.border
+                'w-full rounded-md p-4 transition-colors duration-200 ease-out',
+                item.background,
+                item.hover
               )}
             >
-              <div className="flex items-center gap-2">
-                <FontAwesomeIcon className={clsx('text-3xl', item.text)} icon={item.icon} fixedWidth />
-                <p className={clsx('text-2xl font-bold', item.text)}>{item.name}</p>
+              <div className={clsx('flex gap-1', item.text)}>
+                <p className="text-2xl font-bold">{item.name}</p>
+                <span>
+                  <FontAwesomeIcon className="align-super" icon={item.icon} fixedWidth />
+                </span>
               </div>
-              <p className="mt-2 text-sm/5 font-light text-grey-200">{item.description}</p>
+              <p className={clsx('mt-2 text-sm/5 font-light', item.text)}>{item.description}</p>
             </div>
           </Link>
         </motion.li>

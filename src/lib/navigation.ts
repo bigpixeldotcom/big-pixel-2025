@@ -10,7 +10,8 @@ import type { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 interface NavProps {
   id: number
   icon: IconDefinition
-  border: string
+  background: string
+  hover: string
   text: string
   name: string
   value: string
@@ -21,8 +22,9 @@ export const navigation: NavProps[] = [
   {
     id: 0,
     icon: faRectangleCode,
-    border: 'border-green',
-    text: 'text-green',
+    background: 'bg-green',
+    hover: 'hover:bg-dark-green',
+    text: 'text-grey-100',
     name: 'Web Design',
     value: '/web',
     description:
@@ -31,8 +33,9 @@ export const navigation: NavProps[] = [
   {
     id: 1,
     icon: faGearCode,
-    border: 'border-blue',
-    text: 'text-blue',
+    background: 'bg-blue',
+    hover: 'hover:bg-dark-blue',
+    text: 'text-grey-100',
     name: 'Digital Development',
     value: '/digital',
     description:
@@ -41,8 +44,9 @@ export const navigation: NavProps[] = [
   {
     id: 2,
     icon: faPaintbrushPencil,
-    border: 'border-purple',
-    text: 'text-purple',
+    background: 'bg-purple',
+    hover: 'hover:bg-dark-purple',
+    text: 'text-grey-100',
     name: 'Graphic Design',
     value: '/design',
     description:
@@ -51,8 +55,9 @@ export const navigation: NavProps[] = [
   {
     id: 3,
     icon: faFaceSmile,
-    border: 'border-yellow',
-    text: 'text-yellow',
+    background: 'bg-yellow',
+    hover: 'hover:bg-dark-yellow',
+    text: 'text-grey-800',
     name: 'About',
     value: '/about',
     description:
@@ -61,8 +66,9 @@ export const navigation: NavProps[] = [
   {
     id: 4,
     icon: faNewspaper,
-    border: 'border-red',
-    text: 'text-red',
+    background: 'bg-red',
+    hover: 'hover:bg-dark-red',
+    text: 'text-grey-100',
     name: 'News',
     value: '/news',
     description:

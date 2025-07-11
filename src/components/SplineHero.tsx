@@ -5,7 +5,7 @@ import { Suspense } from 'react'
 export default function SplineHero() {
   return (
     <div className="h-full bg-spline-grey">
-      <div className="h-[480px] md:h-[560px] lg:h-[720px] xl:h-[1200px]">
+      <div className="h-[240px] md:h-[560px] lg:h-[720px] xl:h-[900px]">
         <Suspense fallback={<Image src="big_pixel.jpg" fill alt="" priority />}>
           <Spline scene="big_pixel.spline" />
         </Suspense>
