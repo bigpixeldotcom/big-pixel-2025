@@ -9,7 +9,7 @@ export default function Design() {
         title="Graphic Design"
         subtitle="Print, brand identity, and brochure design"
         icon={faPaintbrushPencil}
-        colour="bg-purple"
+        colour="bg-purple-50"
       />
     </RootLayout>
   )

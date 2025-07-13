@@ -9,7 +9,8 @@ export default function ScrollingSite() {
       y: 0,
       transition: {
         type: 'tween',
-        duration: 2.5,
+        duration: 4,
+        delay: 0.2,
       },
     },
     onscreen: {
@@ -25,13 +26,13 @@ export default function ScrollingSite() {
   return (
     <div className="mx-0 -mt-6 mb-8 size-5/6 perspective-distant md:-mt-10 md:mb-16">
       <div className="-translate-z-36 rotate-x-18 -rotate-y-8 rotate-z-6">
-        <div className="aspect-3/2 w-[360px] overflow-hidden rounded-xl bg-grey-800 shadow-black drop-shadow-[32px_42px_6px_rgba(0,0,0,0.25)] md:w-[720px] md:drop-shadow-[64px_96px_10px_rgba(0,0,0,0.25)] lg:w-[1024px]">
+        <div className="aspect-3/2 w-[360px] overflow-hidden rounded-xl bg-grey-75 shadow-black drop-shadow-[32px_42px_6px_rgba(0,0,0,0.25)] md:w-[720px] md:drop-shadow-[64px_96px_10px_rgba(0,0,0,0.25)] lg:w-[1024px]">
           <div className="flex gap-1.5 pt-3 pl-4 md:gap-2 md:pt-6 md:pl-8">
-            <div className="size-2 rounded-full bg-red md:size-3 lg:size-4" />
-            <div className="size-2 rounded-full bg-yellow md:size-3 lg:size-4" />
-            <div className="size-2 rounded-full bg-green md:size-3 lg:size-4" />
+            <div className="size-2 rounded-full bg-red-50 md:size-3 lg:size-4" />
+            <div className="size-2 rounded-full bg-yellow-50 md:size-3 lg:size-4" />
+            <div className="size-2 rounded-full bg-green-50 md:size-3 lg:size-4" />
           </div>
-          <div className="mx-3 mt-2 rounded-md border border-grey-500 px-1 py-0.5 text-xs text-grey-400 md:mx-6 md:mt-4 md:px-2 md:py-1 md:text-sm lg:text-base">
+          <div className="mx-3 mt-2 rounded-md border border-grey-25 px-1 py-0.5 text-xs text-grey-25 md:mx-6 md:mt-4 md:px-2 md:py-1 md:text-sm lg:text-base">
             https://calibreaudio.org.uk
           </div>
           <motion.div

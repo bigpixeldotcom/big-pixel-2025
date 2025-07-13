@@ -9,7 +9,7 @@ export default function About() {
         title="About Big Pixel"
         subtitle="The people, the mission, and the vision"
         icon={faSmile}
-        colour="bg-yellow"
+        colour="bg-yellow-50"
       />
     </RootLayout>
   )

@@ -28,7 +28,7 @@ export default function PageHeader({
       className={clsx('flex items-center pt-36 pb-12 lg:pt-44 lg:pb-24', colour)}
     >
       <Container>
-        <div className={colour === 'bg-yellow' ? 'text-black' : 'text-white'}>
+        <div className={colour === 'bg-yellow-50' ? 'text-black' : 'text-white'}>
           <div className="flex gap-2">
             <p className="text-5xl font-black lg:text-8xl">{title}</p>
             <span>

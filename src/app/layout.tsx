@@ -36,7 +36,7 @@ export default function RootLayout({
       <head>
         <meta name="apple-mobile-web-app-title" content="Big Pixel" />
       </head>
-      <body className={`${interSans.variable} ${tourneyHeader.variable}`}>{children}</body>
+      <body className={`${interSans.variable} ${tourneyHeader.variable} bg-grey-bg text-grey-100`}>{children}</body>
     </html>
   )
 }

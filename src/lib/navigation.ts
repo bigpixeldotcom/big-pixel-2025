@@ -22,9 +22,9 @@ export const navigation: NavProps[] = [
   {
     id: 0,
     icon: faRectangleCode,
-    background: 'bg-green',
-    hover: 'hover:bg-dark-green',
-    text: 'text-grey-100',
+    background: 'bg-green-50',
+    hover: 'hover:bg-green-75',
+    text: 'text-white',
     name: 'Web Design',
     value: '/web',
     description:
@@ -33,9 +33,9 @@ export const navigation: NavProps[] = [
   {
     id: 1,
     icon: faGearCode,
-    background: 'bg-blue',
-    hover: 'hover:bg-dark-blue',
-    text: 'text-grey-100',
+    background: 'bg-blue-50',
+    hover: 'hover:bg-blue-75',
+    text: 'text-white',
     name: 'Digital Development',
     value: '/digital',
     description:
@@ -44,9 +44,9 @@ export const navigation: NavProps[] = [
   {
     id: 2,
     icon: faPaintbrushPencil,
-    background: 'bg-purple',
-    hover: 'hover:bg-dark-purple',
-    text: 'text-grey-100',
+    background: 'bg-purple-50',
+    hover: 'hover:bg-purple-75',
+    text: 'text-white',
     name: 'Graphic Design',
     value: '/design',
     description:
@@ -55,9 +55,9 @@ export const navigation: NavProps[] = [
   {
     id: 3,
     icon: faFaceSmile,
-    background: 'bg-yellow',
-    hover: 'hover:bg-dark-yellow',
-    text: 'text-grey-800',
+    background: 'bg-yellow-50',
+    hover: 'hover:bg-yellow-75',
+    text: 'text-black',
     name: 'About',
     value: '/about',
     description:
@@ -66,9 +66,9 @@ export const navigation: NavProps[] = [
   {
     id: 4,
     icon: faNewspaper,
-    background: 'bg-red',
-    hover: 'hover:bg-dark-red',
-    text: 'text-grey-100',
+    background: 'bg-red-50',
+    hover: 'hover:bg-red-75',
+    text: 'text-white',
     name: 'News',
     value: '/news',
     description:

@@ -42,15 +42,15 @@ const socials: SocialType[] = [
 export default function Footer() {
   const year = new Date().getFullYear()
   return (
-    <footer className="bg-grey-800">
+    <footer className="bg-grey-100">
       <Container>
         <div className="grid grid-cols-1 items-center gap-4 py-8 md:py-12 lg:grid-cols-6">
           <div className="col-span-full lg:col-span-3">
-            <p className="text-sm text-grey-100">
+            <p className="text-sm text-grey-10">
               &copy; Copyright {year}, Big Pixel Consulting Ltd. All rights reserved.
             </p>
-            <p className="mt-2 text-xs text-grey-200">Registered in England and Wales No. 15928040.</p>
-            <p className="text-xs text-grey-200">
+            <p className="mt-2 text-xs text-grey-25">Registered in England and Wales No. 15928040.</p>
+            <p className="text-xs text-grey-25">
               Registered address: Hardwick House, Agricultural Hall Plain, Norwich, England, NR1 3FS
             </p>
           </div>
@@ -72,7 +72,7 @@ export default function Footer() {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-2xl text-grey-100 transition-colors duration-200 ease-out hover:text-grey-200"
+                  className="text-2xl text-grey-10 transition-colors duration-200 ease-out hover:text-grey-25"
                 >
                   <FontAwesomeIcon icon={social.icon} fixedWidth />
                 </Link>

@@ -9,7 +9,7 @@ export default function Digital() {
         title="Digital Development"
         subtitle="Databases, authentication, and secure backend development"
         icon={faGearCode}
-        colour="bg-blue"
+        colour="bg-blue-50"
       />
     </RootLayout>
   )

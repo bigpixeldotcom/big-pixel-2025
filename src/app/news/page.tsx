@@ -9,7 +9,7 @@ export default function News() {
         title="News"
         subtitle="The latest news and developments at Big Pixel"
         icon={faNewspaper}
-        colour="bg-red"
+        colour="bg-red-50"
       />
     </RootLayout>
   )

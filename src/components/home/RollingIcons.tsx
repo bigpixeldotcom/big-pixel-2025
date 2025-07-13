@@ -32,7 +32,7 @@ const workTypes: WorkType[] = [
     cta: 'Learn more about our web design services',
     intro:
       'Beautiful, user-first websites designed to captivate your audience and deliver results — whether you’re a startup or a global brand.',
-    colour: 'bg-green',
+    colour: 'bg-green-50',
   },
   {
     id: 2,
@@ -42,7 +42,7 @@ const workTypes: WorkType[] = [
     cta: 'Learn more about our web development services',
     intro:
       'We don’t just make it look good—we build it to work. Secure, scalable web development tailored to your business goals. From CMS-driven sites to custom apps and ecommerce.',
-    colour: 'bg-blue',
+    colour: 'bg-blue-50',
   },
   {
     id: 3,
@@ -52,7 +52,7 @@ const workTypes: WorkType[] = [
     cta: 'Learn all about our branding and design services',
     intro:
       'With decades in print and digital, we create memorable brand identities and supporting materials that elevate your message.',
-    colour: 'bg-purple',
+    colour: 'bg-purple-50',
   },
   {
     id: 4,
@@ -62,7 +62,7 @@ const workTypes: WorkType[] = [
     cta: 'Learn more about how we can help with your digital strategy',
     intro:
       'We collaborate directly with your team—from marketing heads to founders—to deliver end-to-end creative support.',
-    colour: 'bg-orange',
+    colour: 'bg-orange-50',
   },
 ]
 
@@ -149,10 +149,10 @@ export default function RollingIcons() {
             <FontAwesomeIcon icon={type.icon} fixedWidth />
           </motion.div>
           <motion.div className="mt-6 flex min-h-64 flex-col justify-between gap-2" variants={textVariants}>
-            <h4 className="font-mono text-xl font-black text-yellow">{type.title}</h4>
+            <h4 className="font-mono text-xl font-black text-yellow-50">{type.title}</h4>
             <p className="text-white">{type.intro}</p>
             <Link
-              className="rounded bg-grey-800 px-2 py-1.5 text-white transition-colors duration-200 ease-out hover:bg-black"
+              className="rounded bg-grey-100 px-2 py-1.5 text-white transition-colors duration-200 ease-out hover:bg-black"
               href={type.url}
             >
               {type.cta}
