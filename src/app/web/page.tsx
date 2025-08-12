@@ -6,11 +6,11 @@ import {
   faCartShopping,
   faChartLineUp,
   faFolderTree,
-  faRectangleCode,
   faShieldKeyhole,
+  faSquareCode,
   faUniversalAccess,
   faWrench,
-} from '@awesome.me/kit-89a9106b13/icons/classic/regular'
+} from '@awesome.me/kit-89a9106b13/icons/sharp/regular'
 import type { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -79,7 +79,7 @@ export default function Web() {
       <PageHeader
         title="Web Design"
         subtitle="Websites, user interfaces, and user experience"
-        icon={faRectangleCode}
+        icon={faSquareCode}
         colour="bg-green-50"
       />
       <Container>
@@ -96,12 +96,24 @@ export default function Web() {
               development, that website will need to be fast, accessible, easy to navigate, and impactful.
             </p>
             <ScrollingSite />
+            <h2 className="text-3xl font-bold text-grey-75">Key Web Design Services We Offer</h2>
+            <div className="grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-6">
+              {services.map((service: Services) => (
+                <div key={service.id} className={`aspect-square w-full rounded-lg p-3 ${service.colour}`}>
+                  <div className={`flex h-48 flex-col items-center justify-evenly gap-1 ${service.text}`}>
+                    <FontAwesomeIcon icon={service.icon} fixedWidth className="text-6xl" />
+                    <p className="font-semibold">{service.title}</p>
+                    <p className="text-center text-sm">{service.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
             <div className="grid grid-cols-2 gap-6 lg:gap-12">
               <div className="order-1 col-span-full lg:col-span-1">Image here</div>
               <div className="order-2 col-span-full lg:col-span-1">
-                <h2 className="font-mono text-5xl font-extrabold tracking-tight text-red-50">
+                <h3 className="font-mono text-5xl font-extrabold tracking-tight text-red-50">
                   Designed for Every Screen, Built for Every User
-                </h2>
+                </h3>
                 <p className="mt-4 text-grey-100 lg:text-lg">
                   We create fully responsive websites that look great on any screen. We ensure sites adapt seamlessly
                   across desktops, tablets, and smartphones &ndash; so your message is always clear and the site is
@@ -123,9 +135,9 @@ export default function Web() {
                 </ul>
               </div>
               <div className="order-4 col-span-full lg:order-3 lg:col-span-1">
-                <h2 className="font-mono text-5xl font-extrabold tracking-tight text-red-50">
+                <h3 className="font-mono text-5xl font-extrabold tracking-tight text-red-50">
                   No Templates, Just Tailored Digital Experiences.
-                </h2>
+                </h3>
                 <p className="mt-4 text-grey-100 lg:text-lg">
                   Your business isn&apos;t off-the-shelf &mdash; your website shouldn&apos;t be either. We create{' '}
                   <strong>bespoke websites</strong> that are designed around your brand, your goals, and your users.
@@ -133,24 +145,24 @@ export default function Web() {
                 </p>
                 <ul className="mt-4 list-disc space-y-3 marker:text-xl marker:text-purple-50">
                   <li>
-                    <span className="font-semibold">Optimised for Mobile &amp; Tablet </span>
-                    &ndash; Layouts that scale beautifully across devices
+                    <span className="font-semibold">Fully Tailored Design </span>
+                    &ndash; No templates or pre-built themes
                   </li>
                   <li>
-                    <span className="font-semibold">Built with Performance in Mind </span>
-                    &ndash; Fast-loading, lightweight front-ends
+                    <span className="font-semibold">Custom Features &amp; Integrations </span>
+                    &ndash; From booking systems to CRM connections
                   </li>
                   <li>
-                    <span className="font-semibold">Designed for Usability </span>
-                    &ndash; Tap targets, accessible menus, and intuitive flows
+                    <span className="font-semibold">Scalable Architecture </span>
+                    &ndash; Built to grow with your business
                   </li>
                 </ul>
               </div>
               <div className="order-3 col-span-full lg:order-4 lg:col-span-1">Image here</div>
             </div>
-            <h2 className="font-mono text-5xl font-extrabold tracking-tight text-red-50 lg:mt-12">
+            <h3 className="font-mono text-5xl font-extrabold tracking-tight text-red-50 lg:mt-12">
               Built to Grow With You
-            </h2>
+            </h3>
             <p className="-mt-6 text-grey-800 lg:text-lg">
               Whether you&apos;re launching your first site or managing a complex digital ecosystem, we&apos;re here for
               the long haul.
@@ -158,18 +170,6 @@ export default function Web() {
               From eCommerce platforms to ongoing maintenance, content updates to performance audits &mdash; we provide
               the support you need to keep your site running smoothly and evolving with your goals.
             </p>
-            <h3 className="text-3xl font-bold text-grey-75">Key Web Design Services We Offer</h3>
-            <div className="grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-6">
-              {services.map((service: Services) => (
-                <div key={service.id} className={`aspect-square w-full rounded-lg p-3 ${service.colour}`}>
-                  <div className={`flex h-48 flex-col items-center justify-evenly gap-1 ${service.text}`}>
-                    <FontAwesomeIcon icon={service.icon} fixedWidth className="text-6xl" />
-                    <p className="font-semibold">{service.title}</p>
-                    <p className="text-center text-sm">{service.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </main>
       </Container>

@@ -1,6 +1,6 @@
 'use client'
 
-import { faBars, faXmark } from '@awesome.me/kit-89a9106b13/icons/classic/regular'
+import { faBars, faXmark } from '@awesome.me/kit-89a9106b13/icons/sharp/regular'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { motion, Variants } from 'motion/react'
 import Link from 'next/link'

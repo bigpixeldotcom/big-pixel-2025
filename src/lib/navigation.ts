@@ -3,8 +3,8 @@ import {
   faGearCode,
   faNewspaper,
   faPaintbrushPencil,
-  faRectangleCode,
-} from '@awesome.me/kit-89a9106b13/icons/classic/regular'
+  faSquareCode,
+} from '@awesome.me/kit-89a9106b13/icons/sharp/regular'
 import type { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 
 interface NavProps {
@@ -21,14 +21,14 @@ interface NavProps {
 export const navigation: NavProps[] = [
   {
     id: 0,
-    icon: faRectangleCode,
+    icon: faSquareCode,
     background: 'bg-green-50',
     hover: 'hover:bg-green-75',
     text: 'text-white',
     name: 'Web Design',
     value: '/web',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.',
+      "Whatever you're doing — selling, creating, building, or collaborating — it's almost certain you'll need a website to go with it.",
   },
   {
     id: 1,
@@ -39,7 +39,7 @@ export const navigation: NavProps[] = [
     name: 'Digital Development',
     value: '/digital',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.',
+      'We design and develop secure, scalable back-end systems that keep your data safe, and your site performing at its best.',
   },
   {
     id: 2,
