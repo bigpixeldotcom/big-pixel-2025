@@ -1,7 +1,7 @@
 import { Container } from '@/components/Container'
 import PageHeader from '@/components/PageHeader'
 import RootLayout from '@/components/RootLayout'
-import { VimeoPortfolio169 } from '@/components/VimeoPlayer'
+import VideoPlayer from '@/components/VideoPlayer'
 import {
   faBalanceScale,
   faFloppyDisk,
@@ -96,7 +96,7 @@ export default function Digital() {
               We design and develop secure, scalable back-end systems that keep your data safe, your users protected,
               and your site performing at its best.
             </p>
-            <VimeoPortfolio169 videoId={1103832184} />
+            <VideoPlayer src="videos/digital-video.mp4" />
             <h2 className="text-3xl font-bold text-grey-75">Key Digital Services We Offer</h2>
             <div className="grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-6">
               {services.map((service: Services) => (
