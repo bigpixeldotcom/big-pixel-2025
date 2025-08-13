@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@plugin "@tailwindcss/typography";
 
 @theme inline {
   --font-sans: var(--font-inter);
@@ -83,4 +84,16 @@
     var(--color-blue-50),
     var(--color-purple-50)
   );
+}
+
+.footnotes {
+  margin-top: 56px;
+}
+
+.footnotes h2 {
+  font-size: var(--text-lg);
+}
+
+.footnotes p {
+  font-size: var(--text-sm);
 }

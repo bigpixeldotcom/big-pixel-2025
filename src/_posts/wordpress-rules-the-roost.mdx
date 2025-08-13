@@ -1,0 +1,76 @@
+---
+title: "WordPress Rules the Roost"
+excerpt: "There is no denying the dominance of WordPress or my personal desire to see it lose that dominant position. However, this article isn’t a WordPress bashing exercise, instead I am offering a few words or caution to all WordPress users."
+coverImage: "/posts/worpress-rules-the-roost/wordpress-boxes.jpg"
+date: "2025-08-11T15:35:07.322Z"
+author:
+  name: Tim Neutkens
+  picture: "/assets/blog/authors/tim.jpeg"
+ogImage:
+  url: "/assets/blog/hello-world/cover.jpg"
+---
+
+# WordPress Rules the Roost, But Approach With Caution
+
+## There is no denying the dominance of WordPress or my personal desire to see it lose that dominant position. However, this article isn’t a WordPress bashing exercise, instead I am offering a few words or caution to all WordPress users.
+
+There are many pitfalls to lookout for with any digital platform. WordPress is by no means the only option that has any areas to be aware of, but due to its prevalence across the internet (43% of all websites run on it) these are the top 10 things to bear in mind.
+
+### 1. Security
+Let’s start with the elephant in the room. The elephant in a stripy shirt, a large bag saying SWAG and a black mask on. When you have grown to the size of WordPress, you naturally draw more attention than other platforms, especially from people who would rather punish your success than put the effort into being successful themselves. This means security will always be an issue for WordPress as it is for Microsoft, Google and AWS. Anecdotally, I know that the most popular page on my own website is `/wp-login` and I don’t even use WordPress. This shows that the easiest way for hackers to gain control of a site is to try and brute force the login page of a WordPress site and hope that the password security is lax.
+
+The core platform of WordPress is actively maintained and patched - there were roughly 90 commits for the past month (11th July 2025 to 11th August 2025) which is an average of 2-3 updates to the code **a day**. And this is the public repository, not the secure subversion that you get on install. Safe to say, it is actively maintained.
+
+### 2. The plugin smörgåsbord
+Linked to security is another major issue – the insane myriad of plugins available for WordPress. According to WP Zoom, “…the overall number of WordPress plugins likely exceeds 70,000”[^1]. That provides you with an almost limitless number of options for your site and is part of what makes WordPress so popular. But those plugins drastically range in quality.
+
+Let’s use an analogy: You need medication to help with an ailment. You can get medication prescribed from a registered doctor and provided by a licensed and trained pharmacist; you could also order some medication that claims to be the same thing online; or order what _might_ be the same from CraigsList; or take the tablet you found on the street that certainly looks the same as the medication you need.
+
+The same is true with plugins. A lot of them are from reputable developers, but you have no idea what is happening in the plugin’s code or what that code does to your site. Plus, all of those plugins will need to be maintained and updated to keep up with the core WordPress code and any security issues that are found. This is not a unique WordPress problem – it is the same across all digital platforms – but the very freedom to use plugins to change the behaviour of your site opens it to potential security vulnerabilities and conflicts in the code.
+
+Whenever an issue happens with WordPress (especially the ever popular 500 internal server error), the first thing a developer will do is switch off all plugins and then turn them back on, one by one, until the culprit is found. It will often remedy the error, but then you need to find an update or an alternative plugin if the one you are using is no longer maintained – which happens a lot on the fringes of plugin superstore land.
+
+### 3. Performance
+Out of the box, WordPress can be sloooooow. Every page is assembled by WordPress on request. That means the database is called, data retrieved and the page created and styled every time a user clicks on a page. This can lead to very long load times, especially on slower connections. These days, people are not willing to wait for the page to load, they will simply go somewhere else where the information is instant, or as near to instant as possible. If you rely on a website to generate business, this can be financially catastrophic or annoying at the very least. It can also damage your rankings on Google, even new AI-first Google, or ChatGPT, or Claude, or DuckDuckGo… you get the point. If a site takes a long time providing information, just like a toddler high on Wham bars, they will lose interest and go off to something more shiny.
+
+### 4. WooCommerce
+According to the official plugin page, WooCommerce is running on 7+ million websites[^2]. That’s a lot. As with all these statistics, it is with good reason.
+
+WooCommerce is popular because it is easy to use, and great at what it does. But WooCommerce is also a hungry little thing that consumes CPU like my Dad used to consume Boasters. As I talked about in performance, WooCommerce generates cart and checkout pages outside of any caching and it calls the database for each product page. This can slow your site down to the point that you might as well be visiting an actual shop on a rainy day in Hull for all the time it has saved you.
+
+### 5. Bloated Databases
+In order to help with those slow load-times I mentioned earlier, WordPress allows for Autoload options that help speed up the retrieval of page data. But this is stored and retrieved on the Database with _every_ request. This make the database bloated with loads of extra data and large meta queries.
+
+Imagine you went to the shops for a pint of milk. You don’t need loads of shopping bags because you are only going for a pint of milk. You head to the supermarket with speed and agility, a single bag for life flapping in your hand. You even regret the bag, after all you only came for a pint of milk. Yet, somehow, when you leave you have the milk, four cartons of orange juice, a lego set that was on sale, three plates to replace those ones you broke last Thursday, a lettuce, a really reduced fillet steak, yoghurts and a multipack of unusually heavy baked bean tins. The bag for life is reaching end of life and you regret not bringing the car.
+
+The same is true of the database. What may have seemed a streamlined website can very quickly bloat into something resembling that storage room you swear you will clear out next weekend. Especially if your site becomes popular.
+
+### 6. Everything is a post + meta
+22 years ago, when _Chicago_ won Best Picture at the Oscars, the first Iraq war began and, incredibly, Den Watts returned to _Eastenders_ 14 years after he died; WordPress appeared on the internet. Originally it was created so people could write blogs. That is why everything in WordPress is built around the ‘post + meta’ structure. This works brilliantly for blogs and still remains the basic template for all news / blog generators in existence today.
+
+But once you turn a WordPress site into a shop, membership site and video streaming platform, that structure becomes a challenge. Most alternate structures in a WP site are ad-hoc and become difficult to maintain and index.
+
+### 7. Editor Experience
+First of all you start with Gutenberg - which is a really good editor. It allows you to create pretty much anything you need on a standard web page. But then, after a while you need to add a shop. So you add WooCommerce. Now you can also generate products and a shop page and everything is lovely. Then you need a bit more. So you add something like Elementor to give you even more customisation. Then you add a plugin to push what Elementor can do. Then another.
+
+Suddenly all those layouts are built on three or four systems and, like a lovely stool with three happy little wooden legs, if one of them breaks, someone is getting hurt. It can also lead to changes in the UX, so one bit is following styles and layouts generated by Gutenberg and then, somewhere else on the page, you get some Woo styling. It all starts to become a case of too many cooks making a right mess of what was, at the start, a simple broth.
+
+### 8. Updating the updates for the update that just updated
+Once you have all the editors and plugins and themes you need, then they all need updating in order to work well together. As I mentioned earlier, if you are using a well-supported and popular plugin or theme, this will not always be a massive issue, as they will most likely keep the plugin working with the latest WP updates. But that is not always guaranteed. It does mean keeping an eye on that update tab. A lot. Plus updates can also then bring that 500 error page back for a little visit and you are back to switching everything off and on again.
+
+### 9. Hosting
+You’ve found a really cheap host and your labour of love website is up for all the world to see. This is normally the time that you discover that not all hosts are built the same way. Again, if your site is a simple blog or a basic single-page site, a cheap, shared hosting provider is probably going to be okay. But if you have a more complicated, multi-page site, or handle commerce or membership; you are going to need a more robust hosting platform.
+
+The main reason is that you will hit caching, database, CPU and PHP worker limits quickly. This can often mean that your site slows or parts of it stop working completely. Especially on a shared hosting platform. This means that all of the computer power and storage space is being shared with other websites.
+
+Like a shared bathroom, this can mean if one website decides that it is more important than yours and spends hours in there, preening and singing Adele just off-key, you are either going to be late to the ball or smell really bad when you do arrive.
+
+It isn’t that you must have dedicated hosting, just that keeping an eye on usage limits and offsetting them against the hosting costs can become an important consideration.
+
+### 10. Twenty Seconds to Comply
+Like the eponymous ED-209, the need for compliance and governance can come as a bit of a shock if you’re not ready for it. WordPress makes it stupidly easy to launch a website, and that is a genuinely brilliant thing. But it is easy to launch without any consideration for who will be responsible for keeping the site up to date, monitoring the site’s performance and making sure that the privacy and cookie policies are complying with the required legal authorities for the countries you may be operating in.
+
+
+[^1]:	Source: [https://www.wpzoom.com/blog/wordpress-statistics/?utm\_source=chatgpt.com](https://www.wpzoom.com/blog/wordpress-statistics/?utm_source=chatgpt.com). Accessed August 2025
+
+[^2]:	Source: [https://wordpress.org/plugins/woocommerce/](https://wordpress.org/plugins/woocommerce/). Accessed August 2025
