@@ -1,6 +1,8 @@
+import { KeyFrameResponsive, SlideShow } from '@/components/Animations'
 import { Container } from '@/components/Container'
 import PageHeader from '@/components/PageHeader'
 import RootLayout from '@/components/RootLayout'
+import { IpadPlayer } from '@/components/VideoPlayer'
 import ScrollingSite from '@/components/web/ScrollingSite'
 import {
   faCartShopping,
@@ -108,10 +110,19 @@ export default function Web() {
                 </div>
               ))}
             </div>
+            <SlideShow
+              items={[
+                { src: '/web/web-imac.png', alt: 'An iMac showing My Calibre website' },
+                { src: '/web/web-ipad.png', alt: 'An iPad showing My Calibre website' },
+                { src: '/web/web-iphone.png', alt: 'An iPhone showing My Calibre website' },
+              ]}
+            />
             <div className="grid grid-cols-2 gap-6 lg:gap-12">
-              <div className="order-1 col-span-full lg:col-span-1">Image here</div>
+              <div className="order-1 col-span-full lg:col-span-1">
+                <KeyFrameResponsive />
+              </div>
               <div className="order-2 col-span-full lg:col-span-1">
-                <h3 className="font-mono text-5xl font-extrabold tracking-tight text-red-50">
+                <h3 className="font-mono text-5xl font-extrabold tracking-tight text-green-50">
                   Designed for Every Screen, Built for Every User
                 </h3>
                 <p className="mt-4 text-grey-100 lg:text-lg">
@@ -135,7 +146,7 @@ export default function Web() {
                 </ul>
               </div>
               <div className="order-4 col-span-full lg:order-3 lg:col-span-1">
-                <h3 className="font-mono text-5xl font-extrabold tracking-tight text-red-50">
+                <h3 className="font-mono text-5xl font-extrabold tracking-tight text-green-50">
                   No Templates, Just Tailored Digital Experiences.
                 </h3>
                 <p className="mt-4 text-grey-100 lg:text-lg">
@@ -158,9 +169,11 @@ export default function Web() {
                   </li>
                 </ul>
               </div>
-              <div className="order-3 col-span-full lg:order-4 lg:col-span-1">Image here</div>
+              <div className="order-3 col-span-full lg:order-4 lg:col-span-1">
+                <IpadPlayer src="/videos/intertidal.mp4" />
+              </div>
             </div>
-            <h3 className="font-mono text-5xl font-extrabold tracking-tight text-red-50 lg:mt-12">
+            <h3 className="font-mono text-5xl font-extrabold tracking-tight text-green-50 lg:mt-12">
               Built to Grow With You
             </h3>
             <p className="-mt-6 text-grey-800 lg:text-lg">

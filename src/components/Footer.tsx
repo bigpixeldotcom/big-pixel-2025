@@ -42,7 +42,7 @@ const socials: SocialType[] = [
 export default function Footer() {
   const year = new Date().getFullYear()
   return (
-    <footer className="bg-grey-100">
+    <footer className="bottom-0 w-screen bg-grey-100">
       <Container>
         <div className="grid grid-cols-1 items-center gap-4 py-8 md:py-12 lg:grid-cols-6">
           <div className="col-span-full lg:col-span-3">

@@ -37,13 +37,16 @@ export default function Navigation() {
   }
 
   return (
-    <motion.ul className="mt-10 grid grid-cols-1 gap-4 lg:grid-cols-3 2xl:grid-cols-5" variants={navVariants}>
+    <motion.ul
+      className="mt-10 grid auto-rows-max grid-cols-1 gap-4 lg:grid-cols-3 2xl:grid-cols-5"
+      variants={navVariants}
+    >
       {navigation.map((item) => (
         <motion.li key={item.id} variants={itemVariants}>
           <Link href={item.value}>
             <div
               className={clsx(
-                'w-full rounded-md p-4 transition-colors duration-200 ease-out',
+                'min-h-full w-full rounded-md p-4 transition-colors duration-200 ease-out',
                 item.background,
                 item.hover
               )}

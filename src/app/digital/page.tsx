@@ -1,7 +1,7 @@
 import { Container } from '@/components/Container'
 import PageHeader from '@/components/PageHeader'
 import RootLayout from '@/components/RootLayout'
-import VideoPlayer from '@/components/VideoPlayer'
+import { FloatingPlayer } from '@/components/VideoPlayer'
 import {
   faBalanceScale,
   faFloppyDisk,
@@ -11,17 +11,8 @@ import {
   faShieldKeyhole,
   faWebhook,
 } from '@awesome.me/kit-89a9106b13/icons/sharp/regular'
-import type { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-interface Services {
-  id: number
-  title: string
-  description: string
-  icon: IconDefinition
-  colour: string
-  text: string
-}
 const services = [
   {
     id: 1,
@@ -96,7 +87,7 @@ export default function Digital() {
               We design and develop secure, scalable back-end systems that keep your data safe, your users protected,
               and your site performing at its best.
             </p>
-            <VideoPlayer src="videos/digital-video.mp4" />
+            <FloatingPlayer src="videos/digital-video.mp4" />
             <h2 className="text-3xl font-bold text-grey-75">Key Digital Services We Offer</h2>
             <div className="grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-6">
               {services.map((service: Services) => (
@@ -109,6 +100,43 @@ export default function Digital() {
                 </div>
               ))}
             </div>
+            <div className="grid grid-cols-2 gap-6 lg:gap-12">
+              <div className="order-1 col-span-full lg:col-span-1">Image here</div>
+              <div className="order-2 col-span-full lg:col-span-1">
+                <h3 className="font-mono text-5xl font-extrabold tracking-tight text-blue-50">
+                  Robust, Secure Back-End Development
+                </h3>
+                <p className="mt-4 text-grey-100 lg:text-lg">
+                  Your website is more than what your customers see &ndash; it&apos;s how you protect their data, manage
+                  operations, and scale your business. We build secure, reliable systems that handle everything from
+                  customer accounts to internal tools, ensuring your digital platform is stable, safe, and ready for
+                  growth. Whether you&apos;re a charity accepting donations or a business processing orders, we make
+                  sure your data &ndash; and your reputation &ndash; stay protected.
+                </p>
+              </div>
+              <div className="order-4 col-span-full lg:order-3 lg:col-span-1">
+                <h3 className="font-mono text-5xl font-extrabold tracking-tight text-blue-50">
+                  Built for Performance. Engineered for Security
+                </h3>
+                <p className="mt-4 text-grey-100 lg:text-lg">
+                  Your back end needs to do more than &quot;work&quot; &ndash; it needs to perform, protect, and grow
+                  with your organisation. We design and build <strong>tailored, secure infrastructure</strong> to manage
+                  content, user data, ecommerce, and more. Every site we develop follows best practices in data
+                  handling, encryption, and uptime reliability &ndash; so you can focus on your business with peace of
+                  mind.
+                </p>
+              </div>
+              <div className="order-3 col-span-full lg:order-4 lg:col-span-1">Image here</div>
+            </div>
+            <h3 className="font-mono text-5xl font-extrabold tracking-tight text-blue-50 lg:mt-12">
+              Back-End Architecture You Can Trust
+            </h3>
+            <p className="-mt-6 text-grey-800 lg:text-lg">
+              When you work with Big Pixel, you’re not just getting a website &ndash; you&apos;re getting a digital
+              foundation built to support your organisation long-term. From GDPR-compliant data handling to custom
+              content management systems, we create powerful, secure back-end solutions that deliver confidence to your
+              team and protection to your users.
+            </p>
           </div>
         </main>
       </Container>

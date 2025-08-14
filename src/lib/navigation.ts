@@ -28,7 +28,7 @@ export const navigation: NavProps[] = [
     name: 'Web Design',
     value: '/web',
     description:
-      "Whatever you're doing — selling, creating, building, or collaborating — it's almost certain you'll need a website to go with it.",
+      "Whatever you're doing - selling, creating, building, or collaborating - it's almost certain you'll need a website to go with it.",
   },
   {
     id: 1,
@@ -50,7 +50,7 @@ export const navigation: NavProps[] = [
     name: 'Graphic Design',
     value: '/design',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.',
+      'With decades in print and digital, we create memorable brand identities and supporting materials that elevate your message.',
   },
   {
     id: 3,
@@ -60,8 +60,7 @@ export const navigation: NavProps[] = [
     text: 'text-black',
     name: 'About',
     value: '/about',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.',
+    description: 'Based in Norfolk, Adrian has decades of experience as a graphic designer and full-stack developer.',
   },
   {
     id: 4,
@@ -72,6 +71,6 @@ export const navigation: NavProps[] = [
     name: 'News',
     value: '/news',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.',
+      'The latest news from Big Pixel, as well as articles on marketing, the design process, and tech updates.',
   },
 ]

@@ -24,9 +24,9 @@ export default function ScrollingSite() {
   }
 
   return (
-    <div className="mx-0 -mt-6 mb-8 size-5/6 perspective-distant md:-mt-10 md:mb-16">
+    <div className="z-0 mx-0 -mt-6 mb-8 size-full perspective-distant sm:size-5/6 md:-mt-10 md:mb-16">
       <div className="-translate-z-36 rotate-x-18 -rotate-y-8 rotate-z-6">
-        <div className="aspect-3/2 w-[360px] overflow-hidden rounded-xl bg-grey-75 shadow-black drop-shadow-[32px_42px_6px_rgba(0,0,0,0.25)] md:w-[720px] md:drop-shadow-[64px_96px_10px_rgba(0,0,0,0.25)] lg:w-[1024px]">
+        <div className="aspect-3/2 w-full overflow-hidden rounded-xl bg-grey-75 shadow-2xl sm:w-[360px] sm:drop-shadow-[32px_42px_6px_rgba(0,0,0,0.25)] md:w-[720px] md:drop-shadow-[64px_96px_10px_rgba(0,0,0,0.25)] lg:w-[1024px]">
           <div className="flex gap-1.5 pt-3 pl-4 md:gap-2 md:pt-6 md:pl-8">
             <div className="size-2 rounded-full bg-red-50 md:size-3 lg:size-4" />
             <div className="size-2 rounded-full bg-yellow-50 md:size-3 lg:size-4" />

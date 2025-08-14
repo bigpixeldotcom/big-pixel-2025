@@ -27,6 +27,7 @@
     "next-cloudinary": "^6",
     "react": "^19",
     "react-dom": "^19",
+    "reading-time": "^1",
     "rehype-sanitize": "^6",
     "rehype-slug": "^6",
     "rehype-stringify": "^10",

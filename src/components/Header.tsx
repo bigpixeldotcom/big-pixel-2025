@@ -32,12 +32,12 @@ export default function Header() {
     },
   }
   return (
-    <>
-      <div className="absolute top-4 right-4 z-40">
+    <div className="fixed top-0 z-30">
+      <div className="absolute top-4 right-8 z-40">
         <div className="flex items-center justify-center gap-4">
           <Link
             href="/contact"
-            className="rounded-full border-2 border-white/60 bg-white/10 px-4 py-3 text-white/80 transition-colors duration-200 ease-in-out hover:border-white hover:bg-black/30 hover:text-white"
+            className="rounded-full border-2 border-white/60 bg-white/10 px-4 py-3 text-white/80 backdrop-blur-lg transition-colors duration-200 ease-in-out hover:border-white hover:bg-black/30 hover:text-white"
           >
             Contact Us
           </Link>
@@ -62,6 +62,6 @@ export default function Header() {
           <Navigation />
         </div>
       </motion.header>
-    </>
+    </div>
   )
 }
