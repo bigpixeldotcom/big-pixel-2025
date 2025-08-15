@@ -88,7 +88,7 @@ export default function Web() {
         <main className="my-12">
           <div className="flex w-full flex-col gap-6 lg:gap-12">
             <div className="flex">
-              <h1 className="bp-gradient bg-clip-text font-mono text-6xl leading-16 font-black text-transparent md:text-8xl md:leading-28 lg:text-9xl lg:leading-36">
+              <h1 className="bp-gradient font-header bg-clip-text text-6xl leading-16 font-black text-transparent md:text-8xl md:leading-28 lg:text-9xl lg:leading-36">
                 Big pixels
               </h1>
             </div>
@@ -122,7 +122,7 @@ export default function Web() {
                 <KeyFrameResponsive />
               </div>
               <div className="order-2 col-span-full lg:col-span-1">
-                <h3 className="font-mono text-5xl font-extrabold tracking-tight text-green-50">
+                <h3 className="font-header text-5xl font-extrabold tracking-tight text-green-50">
                   Designed for Every Screen, Built for Every User
                 </h3>
                 <p className="mt-4 text-grey-100 lg:text-lg">
@@ -146,7 +146,7 @@ export default function Web() {
                 </ul>
               </div>
               <div className="order-4 col-span-full lg:order-3 lg:col-span-1">
-                <h3 className="font-mono text-5xl font-extrabold tracking-tight text-green-50">
+                <h3 className="font-header text-5xl font-extrabold tracking-tight text-green-50">
                   No Templates, Just Tailored Digital Experiences.
                 </h3>
                 <p className="mt-4 text-grey-100 lg:text-lg">
@@ -173,7 +173,7 @@ export default function Web() {
                 <IpadPlayer src="/videos/intertidal.mp4" />
               </div>
             </div>
-            <h3 className="font-mono text-5xl font-extrabold tracking-tight text-green-50 lg:mt-12">
+            <h3 className="font-header text-5xl font-extrabold tracking-tight text-green-50 lg:mt-12">
               Built to Grow With You
             </h3>
             <p className="-mt-6 text-grey-800 lg:text-lg">

@@ -37,12 +37,12 @@ export default function Header() {
         <div className="flex items-center justify-center gap-4">
           <Link
             href="/contact"
-            className="rounded-full border-2 border-white/60 bg-white/10 px-4 py-3 text-white/80 backdrop-blur-lg transition-colors duration-200 ease-in-out hover:border-white hover:bg-black/30 hover:text-white"
+            className="rounded-full border-2 border-white/60 bg-black/30 px-4 py-3 text-white/80 backdrop-blur-lg transition-colors duration-300 ease-out hover:border-white hover:bg-black/40 hover:text-white"
           >
             Contact Us
           </Link>
           <button
-            className="size-12 cursor-pointer rounded-full bg-white/20 text-xl text-white transition-colors duration-200 ease-in-out hover:bg-black/30"
+            className="size-12 cursor-pointer rounded-full border-2 border-white/60 bg-black/30 text-xl text-white backdrop-blur-lg transition-colors duration-300 ease-out hover:border-white hover:bg-black/40 hover:text-white"
             onClick={() => setIsOpen(!isOpen)}
           >
             <FontAwesomeIcon icon={isOpen ? faXmark : faBars} fixedWidth />

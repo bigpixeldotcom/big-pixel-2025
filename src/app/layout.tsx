@@ -1,19 +1,29 @@
 import '@/styles/base.css'
 import type { Metadata } from 'next'
-import { Inter, Tourney } from 'next/font/google'
+import localFont from 'next/font/local'
 
+import { ConsentManagerDialog, ConsentManagerProvider, CookieBanner } from '@c15t/nextjs'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
+
 config.autoAddCss = false
 
-const interSans = Inter({
+const inter = localFont({
+  src: './fonts/InterVariable.ttf',
+  display: 'swap',
   variable: '--font-inter',
-  subsets: ['latin'],
 })
 
-const tourneyHeader = Tourney({
+const tourney = localFont({
+  src: './fonts/TourneyVariable.ttf',
+  display: 'swap',
   variable: '--font-tourney',
-  subsets: ['latin'],
+})
+
+const fira = localFont({
+  src: './fonts/fira-code-variable.ttf',
+  display: 'swap',
+  variable: '--font-fira',
 })
 
 export const metadata: Metadata = {
@@ -68,9 +78,25 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="Big Pixel" />
       </head>
       <body
-        className={`${interSans.variable} ${tourneyHeader.variable} h-screen max-w-screen overflow-x-hidden bg-grey-bg text-grey-100`}
+        className={`${inter.variable} ${tourney.variable} ${fira.variable} h-screen max-w-screen overflow-x-hidden bg-grey-bg text-grey-100`}
       >
-        {children}
+        <ConsentManagerProvider
+          options={{
+            mode: 'c15t',
+            backendURL: '/api/c15t',
+            consentCategories: ['necessary', 'marketing', 'experience'], // Optional: Specify which consent categories to show in the banner.
+            ignoreGeoLocation: true, // Useful for development to always view the banner.
+          }}
+        >
+          <CookieBanner
+            theme={{
+              'banner.root': 'font-inter',
+            }}
+          />
+          <ConsentManagerDialog />
+
+          {children}
+        </ConsentManagerProvider>
       </body>
     </html>
   )

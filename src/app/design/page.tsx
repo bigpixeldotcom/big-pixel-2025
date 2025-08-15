@@ -1,3 +1,4 @@
+import { SmallSlideShow } from '@/components/Animations'
 import { Container } from '@/components/Container'
 import PageHeader from '@/components/PageHeader'
 import RootLayout from '@/components/RootLayout'
@@ -76,7 +77,7 @@ export default function Design() {
         <main className="my-12">
           <div className="flex w-full flex-col gap-6 lg:gap-12">
             <div className="flex">
-              <h1 className="bp-gradient bg-clip-text font-mono text-6xl leading-16 font-black text-transparent md:text-8xl md:leading-28 lg:text-9xl lg:leading-36">
+              <h1 className="bp-gradient font-header bg-clip-text text-6xl leading-16 font-black text-transparent md:text-8xl md:leading-28 lg:text-9xl lg:leading-36">
                 Big impact
               </h1>
             </div>
@@ -106,9 +107,17 @@ export default function Design() {
               ))}
             </div>
             <div className="grid grid-cols-2 gap-6 lg:gap-12">
-              <div className="order-1 col-span-full lg:col-span-1">Image here</div>
+              <div className="order-1 col-span-full size-[480px] lg:col-span-1 xl:size-[620px]">
+                <SmallSlideShow
+                  items={[
+                    { src: '/design/plankton-project.svg', alt: 'Plankton Project logo' },
+                    { src: '/design/floodlife.svg', alt: 'Floodlife logo' },
+                    { src: '/design/mcnag.svg', alt: 'MCNAG logo' },
+                  ]}
+                />
+              </div>
               <div className="order-2 col-span-full lg:col-span-1">
-                <h3 className="font-mono text-5xl font-extrabold tracking-tight text-red-50">
+                <h3 className="font-header text-5xl font-extrabold tracking-tight text-purple-50">
                   Branding That Builds Trust. Design That Gets Results
                 </h3>
                 <p className="mt-4 text-grey-100 lg:text-lg">
@@ -119,7 +128,7 @@ export default function Design() {
                 </p>
               </div>
               <div className="order-4 col-span-full lg:order-3 lg:col-span-1">
-                <h3 className="font-mono text-5xl font-extrabold tracking-tight text-red-50">
+                <h3 className="font-header text-5xl font-extrabold tracking-tight text-purple-50">
                   Graphic Design with Purpose, Built on Experience
                 </h3>
                 <p className="mt-4 text-grey-100 lg:text-lg">
@@ -129,9 +138,17 @@ export default function Design() {
                   fluff. Just focused, functional design that performs.
                 </p>
               </div>
-              <div className="order-3 col-span-full lg:order-4 lg:col-span-1">Image here</div>
+              <div className="order-3 col-span-full lg:order-4 lg:col-span-1">
+                <SmallSlideShow
+                  items={[
+                    { src: '/design/mkdf-1.jpg', alt: 'MKDF typeface design' },
+                    { src: '/design/mkdf-2.jpg', alt: 'MKDF logo design' },
+                    { src: '/design/mkdf-3.jpg', alt: 'MKDF branding design' },
+                  ]}
+                />
+              </div>
             </div>
-            <h3 className="font-mono text-5xl font-extrabold tracking-tight text-red-50 lg:mt-12">
+            <h3 className="font-header text-5xl font-extrabold tracking-tight text-purple-50 lg:mt-12">
               Creating Brands That Speak with Clarity and Confidence
             </h3>
             <p className="-mt-6 text-grey-800 lg:text-lg">

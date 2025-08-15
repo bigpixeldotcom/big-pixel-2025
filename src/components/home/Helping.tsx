@@ -7,7 +7,7 @@ export default function Helping() {
       <Container>
         <div className="my-16 flex w-full flex-col items-center gap-12 md:flex-row">
           <div className="flex flex-col gap-4">
-            <h2 className="font-mono text-6xl font-black text-blue-10 lg:text-8xl">
+            <h2 className="font-header text-6xl font-black text-blue-10 lg:text-8xl">
               Creative Web &amp; Graphic Design for Businesses
             </h2>
             <h3 className="mt-2 text-xl font-semibold text-white lg:text-3xl">

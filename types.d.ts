@@ -3,6 +3,18 @@ type Author = {
   picture: string
 }
 
+type Meeting = {
+  id: string;
+  icon: JSX.Element;
+  colour: string;
+  hover: string;
+  title: string;
+  description: string;
+  duration: string;
+  price: string;
+  link: string;
+}
+
 type Post = {
   slug: string
   title: string

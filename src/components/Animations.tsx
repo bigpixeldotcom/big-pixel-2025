@@ -118,6 +118,52 @@ export function SlideShow({ items }: { items: Slide[] }) {
   )
 }
 
+export function SmallSlideShow({ items }: { items: Slide[] }) {
+  const [selectedIndex, setSelectedIndex] = useState(0)
+  const [direction, setDirection] = useState<1 | -1>(1)
+
+  function setSlide(newDirection: 1 | -1) {
+    const nextIndex = wrap(0, items.length, selectedIndex + newDirection)
+    setSelectedIndex(nextIndex)
+    setDirection(newDirection)
+  }
+
+  return (
+    <div className="flex items-center justify-center gap-2 xl:gap-6">
+      <motion.button
+        aria-label="Previous"
+        className="z-10 flex size-8 items-center justify-center rounded-full bg-purple-50 text-white"
+        onClick={() => setSlide(-1)}
+        whileTap={{ scale: 0.9 }}
+      >
+        <ArrowLeft />
+      </motion.button>
+      <div className="relative size-[360px] overflow-hidden xl:size-[480px]">
+        <AnimatePresence custom={direction} initial={false} mode="popLayout">
+          <Slide key={selectedIndex}>
+            <Image
+              src={items[selectedIndex].src}
+              alt={items[selectedIndex].alt ?? ''}
+              fill
+              className="object-fit"
+              sizes="(max-width: 480px) 100vw, 480px"
+              priority
+            />
+          </Slide>
+        </AnimatePresence>
+      </div>
+      <motion.button
+        aria-label="Next"
+        className="z-10 flex size-8 items-center justify-center rounded-full bg-purple-50 text-white"
+        onClick={() => setSlide(1)}
+        whileTap={{ scale: 0.9 }}
+      >
+        <ArrowRight />
+      </motion.button>
+    </div>
+  )
+}
+
 const Slide = motion(
   forwardRef(function Slide({ children }: { children: React.ReactNode }, ref: React.Ref<HTMLDivElement>) {
     const direction = usePresenceData() as 1 | -1

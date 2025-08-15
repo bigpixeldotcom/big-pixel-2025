@@ -1,11 +1,6 @@
 'use client'
 
-import {
-  faBriefcaseBlank,
-  faGearCode,
-  faPaintbrushPencil,
-  faRectangleCode,
-} from '@awesome.me/kit-89a9106b13/icons/classic/regular'
+import { faGearCode, faPaintbrushPencil, faRectangleCode } from '@awesome.me/kit-89a9106b13/icons/classic/regular'
 import type { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import clsx from 'clsx'
@@ -54,16 +49,16 @@ const workTypes: WorkType[] = [
       'With decades in print and digital, we create memorable brand identities and supporting materials that elevate your message.',
     colour: 'bg-purple-50',
   },
-  {
-    id: 4,
-    title: 'Strategy & Support',
-    icon: faBriefcaseBlank,
-    url: '/strategy',
-    cta: 'Learn more about how we can help with your digital strategy',
-    intro:
-      'We collaborate directly with your team—from marketing heads to founders—to deliver end-to-end creative support.',
-    colour: 'bg-orange-50',
-  },
+  // {
+  //   id: 4,
+  //   title: 'Strategy & Support',
+  //   icon: faBriefcaseBlank,
+  //   url: '/strategy',
+  //   cta: 'Learn more about how we can help with your digital strategy',
+  //   intro:
+  //     'We collaborate directly with your team—from marketing heads to founders—to deliver end-to-end creative support.',
+  //   colour: 'bg-orange-50',
+  // },
 ]
 
 const containerVariants: Variants = {
@@ -131,7 +126,7 @@ export default function RollingIcons() {
 
   return (
     <motion.div
-      className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-4"
+      className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-1 xl:grid-cols-3 xl:gap-16"
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount }}
@@ -149,10 +144,12 @@ export default function RollingIcons() {
             <FontAwesomeIcon icon={type.icon} fixedWidth />
           </motion.div>
           <motion.div className="mt-6 flex min-h-64 flex-col justify-between gap-2" variants={textVariants}>
-            <h4 className="font-mono text-xl font-black text-yellow-50">{type.title}</h4>
-            <p className="text-white">{type.intro}</p>
+            <div>
+              <h4 className="font-mono text-xl font-black text-yellow-50">{type.title}</h4>
+              <p className="mt-2 text-white">{type.intro}</p>
+            </div>
             <Link
-              className="rounded bg-grey-100 px-2 py-1.5 text-white transition-colors duration-200 ease-out hover:bg-black"
+              className="flex h-24 items-center justify-center rounded bg-grey-100 p-6 text-white transition-colors duration-200 ease-out hover:bg-black"
               href={type.url}
             >
               {type.cta}

@@ -8,7 +8,7 @@ export default function BigIdeas() {
       <Container>
         <div className="mt-16 flex flex-col items-center gap-12 lg:flex-row">
           <div className="flex flex-col gap-4">
-            <h2 className="font-mono text-6xl font-black text-red-50 lg:text-8xl">Big Ideas Deserve a Big Impact</h2>
+            <h2 className="font-header text-6xl font-black text-red-50 lg:text-8xl">Big Ideas Deserve a Big Impact</h2>
             <h3 className="mt-2 text-xl font-semibold lg:text-3xl">
               The internet is a very busy place, with over 1 billion websites estimated to be out there
               <a href="#1" className="align-super text-xs hover:text-red-50">

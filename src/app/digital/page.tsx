@@ -1,6 +1,7 @@
 import { Container } from '@/components/Container'
 import PageHeader from '@/components/PageHeader'
 import RootLayout from '@/components/RootLayout'
+import SecuritySpline from '@/components/splines/Security'
 import { FloatingPlayer } from '@/components/VideoPlayer'
 import {
   faBalanceScale,
@@ -12,6 +13,7 @@ import {
   faWebhook,
 } from '@awesome.me/kit-89a9106b13/icons/sharp/regular'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Image from 'next/image'
 
 const services = [
   {
@@ -77,7 +79,7 @@ export default function Digital() {
         <main className="my-12">
           <div className="flex w-full flex-col gap-6 lg:gap-12">
             <div className="flex">
-              <h1 className="bp-gradient bg-clip-text font-mono text-6xl leading-16 font-black text-transparent md:text-8xl md:leading-28 lg:text-9xl lg:leading-36">
+              <h1 className="bp-gradient font-header bg-clip-text text-6xl leading-16 font-black text-transparent md:text-8xl md:leading-28 lg:text-9xl lg:leading-36">
                 Big data
               </h1>
             </div>
@@ -101,9 +103,11 @@ export default function Digital() {
               ))}
             </div>
             <div className="grid grid-cols-2 gap-6 lg:gap-12">
-              <div className="order-1 col-span-full lg:col-span-1">Image here</div>
+              <div className="order-1 col-span-full lg:col-span-1">
+                <SecuritySpline />
+              </div>
               <div className="order-2 col-span-full lg:col-span-1">
-                <h3 className="font-mono text-5xl font-extrabold tracking-tight text-blue-50">
+                <h3 className="font-header text-5xl font-extrabold tracking-tight text-blue-50">
                   Robust, Secure Back-End Development
                 </h3>
                 <p className="mt-4 text-grey-100 lg:text-lg">
@@ -115,7 +119,7 @@ export default function Digital() {
                 </p>
               </div>
               <div className="order-4 col-span-full lg:order-3 lg:col-span-1">
-                <h3 className="font-mono text-5xl font-extrabold tracking-tight text-blue-50">
+                <h3 className="font-header text-5xl font-extrabold tracking-tight text-blue-50">
                   Built for Performance. Engineered for Security
                 </h3>
                 <p className="mt-4 text-grey-100 lg:text-lg">
@@ -126,9 +130,13 @@ export default function Digital() {
                   mind.
                 </p>
               </div>
-              <div className="order-3 col-span-full lg:order-4 lg:col-span-1">Image here</div>
+              <div className="order-3 col-span-full lg:order-4 lg:col-span-1">
+                <div className="justify center flex size-[540px] items-center">
+                  <Image src="/digital/rocket.png" alt="A toy rocket" width={540} height={540} />
+                </div>
+              </div>
             </div>
-            <h3 className="font-mono text-5xl font-extrabold tracking-tight text-blue-50 lg:mt-12">
+            <h3 className="font-header text-5xl font-extrabold tracking-tight text-blue-50 lg:mt-12">
               Back-End Architecture You Can Trust
             </h3>
             <p className="-mt-6 text-grey-800 lg:text-lg">
