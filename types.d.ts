@@ -4,15 +4,15 @@ type Author = {
 }
 
 type Meeting = {
-  id: string;
-  icon: JSX.Element;
-  colour: string;
-  hover: string;
-  title: string;
-  description: string;
-  duration: string;
-  price: string;
-  link: string;
+  id: string
+  icon: JSX.Element
+  colour: string
+  hover: string
+  title: string
+  description: string
+  duration: string
+  price: string
+  link: string
 }
 
 type Post = {
@@ -35,7 +35,7 @@ type Post = {
   noindex?: boolean
 }
 
-type Services {
+type Services = {
   id: number
   title: string
   description: string
