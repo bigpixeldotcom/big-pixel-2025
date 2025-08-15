@@ -193,9 +193,9 @@ const Slide = motion(
 
 export function KeyFrameResponsive() {
   const icons = [
-    <FontAwesomeIcon icon={faDesktop} className="text-9xl" />,
-    <FontAwesomeIcon icon={faTablet} className="text-8xl" />,
-    <FontAwesomeIcon icon={faMobileNotch} className="text-6xl" />,
+    <FontAwesomeIcon key={0} icon={faDesktop} className="text-9xl" />,
+    <FontAwesomeIcon key={1} icon={faTablet} className="text-8xl" />,
+    <FontAwesomeIcon key={2} icon={faMobileNotch} className="text-6xl" />,
   ]
 
   const [iconIndex, setIconIndex] = useState(0)
