@@ -1,12 +1,28 @@
-import Spline from '@splinetool/react-spline/next'
+'use client'
+
+import { useConsentManager } from '@c15t/nextjs'
+import Spline from '@splinetool/react-spline'
 import Image from 'next/image'
 import { Suspense } from 'react'
 
-export default function HeroSpline() {
+export default function SecuritySpline() {
+  const { hasConsentFor } = useConsentManager()
+  const allowed = hasConsentFor('experience')
+
+  if (!allowed) {
+    return (
+      <div className="h-full bg-spline-grey">
+        <div className="relative h-[240px] md:h-[560px] lg:h-[720px] xl:h-[900px]">
+          <Image src="/big_pixel.jpg" fill style={{ objectFit: 'contain' }} alt="" priority />
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className="h-full bg-spline-grey">
       <div className="h-[240px] md:h-[560px] lg:h-[720px] xl:h-[900px]">
-        <Suspense fallback={<Image src="big_pixel.jpg" fill alt="" priority />}>
+        <Suspense fallback={<Image src="/big_pixel.jpg" fill alt="" priority />}>
           <Spline scene="/splines/big_pixel.spline" />
         </Suspense>
       </div>

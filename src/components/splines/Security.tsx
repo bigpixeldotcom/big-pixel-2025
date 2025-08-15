@@ -1,9 +1,7 @@
 'use client'
 
 import { useConsentManager } from '@c15t/nextjs'
-import { lazy, Suspense } from 'react'
-
-const Spline = lazy(() => import('@splinetool/react-spline/next'))
+import Spline from '@splinetool/react-spline'
 
 export default function SecuritySpline() {
   const { hasConsentFor } = useConsentManager()
@@ -16,12 +14,11 @@ export default function SecuritySpline() {
       </div>
     )
   }
+
   return (
-    <div className="h-full w-full">
-      <div className="mx-auto size-[540px]">
-        <Suspense fallback={<div>Loading...</div>}>
-          <Spline scene="/splines/security_cloud.spline" />
-        </Suspense>
+    <div className="size-[540px]">
+      <div className="h-[540px]">
+        <Spline scene="/splines/security_cloud.spline" />
       </div>
     </div>
   )

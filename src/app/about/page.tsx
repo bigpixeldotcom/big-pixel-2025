@@ -17,7 +17,7 @@ export default function About() {
         <main className="my-12">
           <div className="flex w-full flex-col gap-6 lg:gap-12">
             <div className="flex">
-              <h1 className="bp-gradient bg-clip-text font-mono text-6xl leading-16 font-black text-transparent md:text-8xl md:leading-28 lg:text-9xl lg:leading-36">
+              <h1 className="bp-gradient font-header bg-clip-text text-6xl leading-16 font-black text-transparent md:text-8xl md:leading-28 lg:text-9xl lg:leading-36">
                 Big hello
               </h1>
             </div>

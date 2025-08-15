@@ -106,7 +106,7 @@ export default function Design() {
                 </div>
               ))}
             </div>
-            <div className="grid grid-cols-2 gap-6 lg:gap-12">
+            <div className="grid grid-cols-2 items-center gap-6 lg:gap-12">
               <div className="order-1 col-span-full size-[480px] lg:col-span-1 xl:size-[620px]">
                 <SmallSlideShow
                   items={[

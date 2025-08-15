@@ -102,7 +102,7 @@ export default function Digital() {
                 </div>
               ))}
             </div>
-            <div className="grid grid-cols-2 gap-6 lg:gap-12">
+            <div className="grid grid-cols-2 items-center gap-6 lg:gap-12">
               <div className="order-1 col-span-full lg:col-span-1">
                 <SecuritySpline />
               </div>
@@ -130,7 +130,7 @@ export default function Digital() {
                   mind.
                 </p>
               </div>
-              <div className="order-3 col-span-full lg:order-4 lg:col-span-1">
+              <div className="order-3 col-span-full items-center lg:order-4 lg:col-span-1">
                 <div className="justify center flex size-[540px] items-center">
                   <Image src="/digital/rocket.png" alt="A toy rocket" width={540} height={540} />
                 </div>

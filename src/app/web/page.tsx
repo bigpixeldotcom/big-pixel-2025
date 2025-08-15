@@ -117,7 +117,7 @@ export default function Web() {
                 { src: '/web/web-iphone.png', alt: 'An iPhone showing My Calibre website' },
               ]}
             />
-            <div className="grid grid-cols-2 gap-6 lg:gap-12">
+            <div className="grid grid-cols-2 items-center gap-6 lg:gap-12">
               <div className="order-1 col-span-full lg:col-span-1">
                 <KeyFrameResponsive />
               </div>
