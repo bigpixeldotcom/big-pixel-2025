@@ -36,8 +36,8 @@ export default function ContactForm() {
 
   async function onSubmit(data: z.infer<typeof schema>) {
     setIsSubmitting(true)
-    const captcha = await captchaRef.current?.executeAsync()
-    const formData = { ...data, captcha }
+    const token = await captchaRef.current?.executeAsync()
+    const formData = { ...data, captcha: token ?? '' }
     const result = await submitForm(formData)
     if (result && result.id) {
       setFormSuccess(true)
