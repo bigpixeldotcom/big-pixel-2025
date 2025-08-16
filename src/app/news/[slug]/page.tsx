@@ -75,11 +75,11 @@ export default async function NewsPage({ params }: { params: Promise<{ slug: str
       />
       <NewsHeader title={title} image={coverImage} />
       <Container>
-        <Link href="/news" className="mb-4 flex items-center gap-1 text-xs/6 font-medium hover:text-blue-50">
+        <Link href="/news" className="mt-4 flex items-center gap-1 text-xs/6 font-medium hover:text-blue-50 md:mt-0">
           <CircleArrowLeft size={16} />
           <span>Back to News</span>
         </Link>
-        <div className="grid grid-cols-4 gap-2">
+        <div className="mt-4 grid grid-cols-4 gap-2">
           <div className="col-span-4 lg:col-span-1">
             <div className="sticky top-6 w-full overflow-hidden rounded border border-grey-10">
               <ProgressOnScroll />
@@ -111,7 +111,7 @@ export default async function NewsPage({ params }: { params: Promise<{ slug: str
           </div>
           <article
             dangerouslySetInnerHTML={{ __html: htmlContent }}
-            className="col-span-full mx-auto prose lg:col-span-3 lg:prose-lg"
+            className="col-span-full mx-auto prose prose-sm mt-4 sm:prose lg:col-span-3 lg:prose-lg lg:mt-0"
           />
         </div>
       </Container>

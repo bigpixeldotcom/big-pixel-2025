@@ -2,8 +2,8 @@ import Image from 'next/image'
 
 export default function Ipad({ src, alt }: { src: string; alt: string }) {
   return (
-    <div className="aspect-2/3 h-[620px] rounded-2xl bg-gradient-to-br from-grey-50 via-grey-25 to-grey-75 p-2 shadow-2xl shadow-black md:h-[840px]">
-      <div className="aspect-2/3 h-full rounded-xl bg-black p-8">
+    <div className="aspect-2/3 h-96 rounded-2xl bg-gradient-to-br from-grey-50 via-grey-25 to-grey-75 p-2 shadow-2xl shadow-black sm:h-[620px] md:h-[840px]">
+      <div className="aspect-2/3 h-full rounded-xl bg-black p-4 md:p-8">
         <Image
           src={src}
           alt={alt}

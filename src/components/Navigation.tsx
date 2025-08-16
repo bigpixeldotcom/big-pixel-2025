@@ -37,16 +37,13 @@ export default function Navigation() {
   }
 
   return (
-    <motion.ul
-      className="mt-10 grid auto-rows-max grid-cols-1 gap-4 lg:grid-cols-3 2xl:grid-cols-5"
-      variants={navVariants}
-    >
+    <motion.ul className="my-8 grid grid-cols-1 gap-4 px-4 lg:grid-cols-5" variants={navVariants}>
       {navigation.map((item) => (
         <motion.li key={item.id} variants={itemVariants}>
           <Link href={item.value}>
             <div
               className={clsx(
-                'min-h-full w-full rounded-md p-4 transition-colors duration-200 ease-out',
+                'h-full w-full rounded-md p-4 transition-colors duration-200 ease-out',
                 item.background,
                 item.hover
               )}
@@ -57,7 +54,9 @@ export default function Navigation() {
                   <FontAwesomeIcon className="align-super" icon={item.icon} fixedWidth />
                 </span>
               </div>
-              <p className={clsx('mt-2 text-sm/5 font-light', item.text)}>{item.description}</p>
+              <p className={clsx('mt-2 hidden text-xs font-light md:text-sm/5 lg:block', item.text)}>
+                {item.description}
+              </p>
             </div>
           </Link>
         </motion.li>

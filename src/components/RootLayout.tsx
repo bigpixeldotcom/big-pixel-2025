@@ -8,8 +8,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   let pathname = usePathname()
 
   return (
-    <div className="absolute top-0 min-h-screen">
-      <div className="flex min-h-screen flex-col justify-between">
+    <div className="absolute top-0 min-h-screen max-w-screen">
+      <div className="flex min-h-full w-full flex-col justify-between">
         <Header />
         {children}
         <Footer />

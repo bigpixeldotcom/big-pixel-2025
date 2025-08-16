@@ -12,7 +12,7 @@ export default function SecuritySpline() {
   if (!allowed) {
     return (
       <div className="h-full bg-spline-grey">
-        <div className="relative h-[240px] md:h-[560px] lg:h-[720px] xl:h-[900px]">
+        <div className="relative h-[240px] md:h-[560px] lg:h-[720px]">
           <Image src="/big_pixel.jpg" fill style={{ objectFit: 'contain' }} alt="" priority />
         </div>
       </div>
@@ -21,7 +21,7 @@ export default function SecuritySpline() {
 
   return (
     <div className="h-full bg-spline-grey">
-      <div className="h-[240px] md:h-[560px] lg:h-[720px] xl:h-[900px]">
+      <div className="h-[240px] pt-12 md:h-[560px] lg:h-[720px] lg:pt-0">
         <Suspense fallback={<Image src="/big_pixel.jpg" fill alt="" priority />}>
           <Spline scene="/splines/big_pixel.spline" />
         </Suspense>

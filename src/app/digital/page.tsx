@@ -79,7 +79,7 @@ export default function Digital() {
         <main className="my-12">
           <div className="flex w-full flex-col gap-6 lg:gap-12">
             <div className="flex">
-              <h1 className="bp-gradient font-header bg-clip-text text-6xl leading-16 font-black text-transparent md:text-8xl md:leading-28 lg:text-9xl lg:leading-36">
+              <h1 className="bp-gradient font-header bg-clip-text text-6xl leading-18 font-black text-transparent md:text-8xl md:leading-30 lg:text-9xl lg:leading-40">
                 Big data
               </h1>
             </div>
@@ -95,8 +95,8 @@ export default function Digital() {
               {services.map((service: Services) => (
                 <div key={service.id} className={`aspect-square w-full rounded-lg p-3 ${service.colour}`}>
                   <div className={`flex h-48 flex-col items-center justify-evenly gap-1 ${service.text}`}>
-                    <FontAwesomeIcon icon={service.icon} className="text-6xl" />
-                    <p className="font-semibold tracking-tight">{service.title}</p>
+                    <FontAwesomeIcon icon={service.icon} fixedWidth className="text-4xl md:text-5xl lg:text-6xl" />
+                    <p className="text-center font-semibold">{service.title}</p>
                     <p className="text-center text-sm">{service.description}</p>
                   </div>
                 </div>
@@ -131,7 +131,7 @@ export default function Digital() {
                 </p>
               </div>
               <div className="order-3 col-span-full items-center lg:order-4 lg:col-span-1">
-                <div className="justify center flex size-[540px] items-center">
+                <div className="justify center flex size-80 items-center md:size-[540px]">
                   <Image src="/digital/rocket.png" alt="A toy rocket" width={540} height={540} />
                 </div>
               </div>

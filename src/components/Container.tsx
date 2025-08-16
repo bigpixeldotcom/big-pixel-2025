@@ -14,8 +14,8 @@ export function Container<T extends React.ElementType = 'div'>({
   let Component = as ?? 'div'
 
   return (
-    <Component className={clsx('mx-auto max-w-7xl px-6 lg:px-8', className)}>
-      <div className="mx-auto max-w-2xl lg:max-w-none">{children}</div>
+    <Component className={clsx('mx-auto w-full md:max-w-7xl md:px-6 lg:px-8', className)}>
+      <div className="mx-4 max-w-2xl md:mx-auto lg:max-w-7xl">{children}</div>
     </Component>
   )
 }

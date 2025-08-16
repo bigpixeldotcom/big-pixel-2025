@@ -77,7 +77,7 @@ export default function Design() {
         <main className="my-12">
           <div className="flex w-full flex-col gap-6 lg:gap-12">
             <div className="flex">
-              <h1 className="bp-gradient font-header bg-clip-text text-6xl leading-16 font-black text-transparent md:text-8xl md:leading-28 lg:text-9xl lg:leading-36">
+              <h1 className="bp-gradient font-header bg-clip-text text-6xl leading-18 font-black text-transparent md:text-8xl md:leading-30 lg:text-9xl lg:leading-40">
                 Big impact
               </h1>
             </div>
@@ -99,15 +99,15 @@ export default function Design() {
               {services.map((service: Services) => (
                 <div key={service.id} className={`aspect-square w-full rounded-lg p-3 ${service.colour}`}>
                   <div className={`flex h-48 flex-col items-center justify-evenly gap-1 ${service.text}`}>
-                    <FontAwesomeIcon icon={service.icon} className="text-6xl" />
-                    <p className="font-semibold tracking-tight">{service.title}</p>
+                    <FontAwesomeIcon icon={service.icon} fixedWidth className="text-4xl md:text-5xl lg:text-6xl" />
+                    <p className="text-center font-semibold">{service.title}</p>
                     <p className="text-center text-sm">{service.description}</p>
                   </div>
                 </div>
               ))}
             </div>
             <div className="grid grid-cols-2 items-center gap-6 lg:gap-12">
-              <div className="order-1 col-span-full size-[480px] lg:col-span-1 xl:size-[620px]">
+              <div className="order-1 col-span-full mx-auto w-80 md:w-[360px] lg:col-span-1 xl:w-[620px]">
                 <SmallSlideShow
                   items={[
                     { src: '/design/plankton-project.svg', alt: 'Plankton Project logo' },
@@ -138,7 +138,7 @@ export default function Design() {
                   fluff. Just focused, functional design that performs.
                 </p>
               </div>
-              <div className="order-3 col-span-full lg:order-4 lg:col-span-1">
+              <div className="order-3 col-span-full mx-auto w-80 md:w-[360px] lg:order-4 lg:col-span-1 xl:w-[620px]">
                 <SmallSlideShow
                   items={[
                     { src: '/design/mkdf-1.jpg', alt: 'MKDF typeface design' },

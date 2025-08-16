@@ -45,9 +45,9 @@ export default function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="bottom-0 w-screen bg-grey-100">
+    <footer className="max-w-full bg-grey-100">
       <Container>
-        <div className="grid grid-cols-1 items-center gap-4 py-8 md:py-12 lg:grid-cols-6">
+        <div className="grid grid-cols-1 items-center gap-8 py-8 md:py-12 lg:grid-cols-6 lg:gap-4">
           <div className="order-3 col-span-full lg:order-1 lg:col-span-3">
             <p className="text-sm text-grey-10">
               &copy; Copyright {year}, Big Pixel Consulting Ltd. All rights reserved.
@@ -69,11 +69,21 @@ export default function Footer() {
             </nav>
           </div>
           <div className="order-2 col-span-full lg:col-span-2">
-            <div className="flex items-center gap-8">
-              <Link href="https://www.dba.org.uk/" target="_blank" rel="noopener noreferrer">
+            <div className="flex items-center gap-4 lg:gap-8">
+              <Link
+                href="https://www.dba.org.uk/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-16 md:w-32 lg:w-full"
+              >
                 <Image src="/footer/dba-logo.svg" alt="DBA logo" width={160} height={44} />
               </Link>
-              <Link href="https://www.acid.uk.com/" target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://www.acid.uk.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-16 md:w-32 lg:w-full"
+              >
                 <Image src="/footer/acid-logo.svg" alt="ACID logo" width={160} height={44} />
               </Link>
             </div>

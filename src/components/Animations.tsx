@@ -83,16 +83,16 @@ export function SlideShow({ items }: { items: Slide[] }) {
   }
 
   return (
-    <div className="flex items-center justify-center gap-2.5">
+    <div className="flex items-center justify-center gap-1.5 md:gap-2.5">
       <motion.button
         aria-label="Previous"
-        className="z-10 flex size-8 items-center justify-center rounded-full bg-green-50 text-white"
+        className="z-10 flex size-6 items-center justify-center rounded-full bg-green-50 text-white md:size-8"
         onClick={() => setSlide(-1)}
         whileTap={{ scale: 0.9 }}
       >
-        <ArrowLeft />
+        <ArrowLeft className="size-5 md:size-10" />
       </motion.button>
-      <div className="relative size-[800px] overflow-hidden">
+      <div className="relative size-80 overflow-hidden md:size-[640px] lg:size-[860px]">
         <AnimatePresence custom={direction} initial={false} mode="popLayout">
           <Slide key={selectedIndex}>
             <Image
@@ -108,11 +108,11 @@ export function SlideShow({ items }: { items: Slide[] }) {
       </div>
       <motion.button
         aria-label="Next"
-        className="z-10 flex size-8 items-center justify-center rounded-full bg-green-50 text-white"
+        className="z-10 flex size-6 items-center justify-center rounded-full bg-green-50 text-white md:size-8"
         onClick={() => setSlide(1)}
         whileTap={{ scale: 0.9 }}
       >
-        <ArrowRight />
+        <ArrowRight className="size-5 md:size-10" />
       </motion.button>
     </div>
   )
@@ -129,24 +129,23 @@ export function SmallSlideShow({ items }: { items: Slide[] }) {
   }
 
   return (
-    <div className="flex items-center justify-center gap-2 xl:gap-6">
+    <div className="flex items-center justify-center gap-4 md:gap-6">
       <motion.button
         aria-label="Previous"
-        className="z-10 flex size-8 items-center justify-center rounded-full bg-purple-50 text-white"
+        className="z-10 flex size-6 items-center justify-center rounded-full bg-purple-50 text-white md:size-8"
         onClick={() => setSlide(-1)}
         whileTap={{ scale: 0.9 }}
       >
-        <ArrowLeft />
+        <ArrowLeft className="size-4 md:size-6" />
       </motion.button>
-      <div className="relative size-[360px] overflow-hidden xl:size-[480px]">
+      <div className="relative size-70 md:size-[360px] xl:size-[480px]">
         <AnimatePresence custom={direction} initial={false} mode="popLayout">
           <Slide key={selectedIndex}>
             <Image
               src={items[selectedIndex].src}
               alt={items[selectedIndex].alt ?? ''}
               fill
-              className="object-fit"
-              sizes="(max-width: 480px) 100vw, 480px"
+              className="object-cover"
               priority
             />
           </Slide>
@@ -154,11 +153,11 @@ export function SmallSlideShow({ items }: { items: Slide[] }) {
       </div>
       <motion.button
         aria-label="Next"
-        className="z-10 flex size-8 items-center justify-center rounded-full bg-purple-50 text-white"
+        className="z-10 flex size-6 items-center justify-center rounded-full bg-purple-50 text-white md:size-8"
         onClick={() => setSlide(1)}
         whileTap={{ scale: 0.9 }}
       >
-        <ArrowRight />
+        <ArrowRight className="size-4 md:size-6" />
       </motion.button>
     </div>
   )
@@ -171,7 +170,7 @@ const Slide = motion(
     return (
       <motion.div
         ref={ref}
-        className="absolute inset-0 h-full w-full"
+        className="absolute inset-0 size-64 lg:size-full"
         initial={{ opacity: 0, x: direction * 50 }}
         animate={{
           opacity: 1,
@@ -214,7 +213,7 @@ export function KeyFrameResponsive() {
   })
 
   return (
-    <div className="flex h-full w-full items-center justify-center">
+    <div className="flex h-full w-full scale-80 items-center justify-center lg:scale-100">
       <motion.div
         animate={{
           scale: [1, 2, 2, 1.5, 1.5, 1],

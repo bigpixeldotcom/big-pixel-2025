@@ -25,17 +25,17 @@ export default function PageHeader({
         duration: 0.4,
         ease: 'easeOut',
       }}
-      className={clsx('flex items-center pt-36 pb-12 lg:pt-44 lg:pb-24', colour)}
+      className={clsx('flex w-screen items-center pt-24 pb-16 lg:pt-36 lg:pb-24', colour)}
     >
       <Container>
         <div className={colour === 'bg-yellow-50' ? 'text-black' : 'text-white'}>
           <div className="flex gap-2">
-            <p className="text-5xl font-black lg:text-8xl">{title}</p>
+            <p className="text-5xl font-black md:text-7xl lg:text-8xl">{title}</p>
             <span>
-              <FontAwesomeIcon icon={icon} fixedWidth className="align-super text-2xl lg:text-5xl" />
+              <FontAwesomeIcon icon={icon} fixedWidth className="align-super text-2xl md:text-3xl lg:text-5xl" />
             </span>
           </div>
-          {subtitle && <p className="mt-2 text-2xl lg:text-4xl">{subtitle}</p>}
+          {subtitle && <p className="mt-2 text-lg md:text-2xl lg:text-4xl">{subtitle}</p>}
         </div>
       </Container>
     </motion.div>

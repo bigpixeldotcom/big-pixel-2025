@@ -88,11 +88,11 @@ export default function Web() {
         <main className="my-12">
           <div className="flex w-full flex-col gap-6 lg:gap-12">
             <div className="flex">
-              <h1 className="bp-gradient font-header bg-clip-text text-6xl leading-16 font-black text-transparent md:text-8xl md:leading-28 lg:text-9xl lg:leading-36">
+              <h1 className="bp-gradient font-header bg-clip-text text-6xl leading-18 font-black text-transparent md:text-8xl md:leading-30 lg:text-9xl lg:leading-40">
                 Big pixels
               </h1>
             </div>
-            <p className="flex-grow text-lg font-medium text-grey-75 lg:text-3xl lg:leading-10">
+            <p className="flex-grow leading-relaxed font-medium text-grey-75 md:text-lg lg:text-3xl">
               Whatever you&apos;re doing &mdash; selling, creating, building, or collaborating &mdash; it&apos;s almost
               certain you&apos;ll need a website to go with it. And with the lightning-fast pace of technological
               development, that website will need to be fast, accessible, easy to navigate, and impactful.
@@ -103,8 +103,8 @@ export default function Web() {
               {services.map((service: Services) => (
                 <div key={service.id} className={`aspect-square w-full rounded-lg p-3 ${service.colour}`}>
                   <div className={`flex h-48 flex-col items-center justify-evenly gap-1 ${service.text}`}>
-                    <FontAwesomeIcon icon={service.icon} fixedWidth className="text-6xl" />
-                    <p className="font-semibold">{service.title}</p>
+                    <FontAwesomeIcon icon={service.icon} fixedWidth className="text-4xl md:text-5xl lg:text-6xl" />
+                    <p className="text-center font-semibold">{service.title}</p>
                     <p className="text-center text-sm">{service.description}</p>
                   </div>
                 </div>
@@ -118,7 +118,7 @@ export default function Web() {
               ]}
             />
             <div className="grid grid-cols-2 items-center gap-6 lg:gap-12">
-              <div className="order-1 col-span-full lg:col-span-1">
+              <div className="order-1 col-span-full mb-12 lg:col-span-1 lg:mb-0">
                 <KeyFrameResponsive />
               </div>
               <div className="order-2 col-span-full lg:col-span-1">
@@ -130,7 +130,7 @@ export default function Web() {
                   across desktops, tablets, and smartphones &ndash; so your message is always clear and the site is
                   pixel-perfect no matter how, or where, it&apos;s accessed.
                 </p>
-                <ul className="mt-4 list-disc space-y-3 marker:text-xl marker:text-purple-50">
+                <ul className="mx-4 mt-4 list-disc space-y-3 marker:text-xl marker:text-purple-50">
                   <li>
                     <span className="font-semibold">Optimised for Mobile &amp; Tablet </span>
                     &ndash; Layouts that scale beautifully across devices
@@ -154,7 +154,7 @@ export default function Web() {
                   <strong>bespoke websites</strong> that are designed around your brand, your goals, and your users.
                   Every line of code, every pixel, and every interaction is crafted to reflect your unique value.
                 </p>
-                <ul className="mt-4 list-disc space-y-3 marker:text-xl marker:text-purple-50">
+                <ul className="mx-4 mt-4 list-disc space-y-3 marker:text-xl marker:text-purple-50">
                   <li>
                     <span className="font-semibold">Fully Tailored Design </span>
                     &ndash; No templates or pre-built themes
