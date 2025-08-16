@@ -27,7 +27,7 @@ export async function submitForm(data: z.infer<typeof schema>) {
     },
     body: new URLSearchParams({
       secret: secretKey,
-      response: result.data.recaptchaToken,
+      response: result.data.captcha,
     }),
   })
 
