@@ -9,7 +9,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
   return (
     <div className="absolute top-0 min-h-screen max-w-screen">
-      <div className="flex min-h-full w-full flex-col justify-between">
+      <div className="flex min-h-full w-screen flex-col justify-between">
         <Header />
         {children}
         <Footer />

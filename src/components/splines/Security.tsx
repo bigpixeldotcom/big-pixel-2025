@@ -1,18 +1,23 @@
 'use client'
 
-import { ConsentButton, useConsentManager } from '@c15t/nextjs'
+import { useConsentManager } from '@c15t/nextjs'
 import Spline from '@splinetool/react-spline'
 
 export default function SecuritySpline() {
-  const { hasConsentFor } = useConsentManager()
-  const allowed = hasConsentFor('experience')
+  const consent = useConsentManager()
+  const allowed = consent.hasConsentFor('experience')
 
   if (!allowed) {
     return (
       <div className="h-full w-full">
-        <div className="mx-auto size-[540px]">
-          <p>This interactive 3D content is blocked until you allow “experience” cookies.</p>
-          <ConsentButton className="mt-2">Update privacy settings</ConsentButton>
+        <div className="mx-auto flex size-[540px] flex-col items-center justify-center">
+          <p className="text-center">This interactive 3D content is blocked until you allow “experience” cookies.</p>
+          <button
+            onClick={() => consent.setIsPrivacyDialogOpen(true)}
+            className="mt-2 cursor-pointer font-semibold text-blue-50 transition-colors duration-300 ease-out hover:text-blue-75"
+          >
+            Update privacy settings
+          </button>
         </div>
       </div>
     )
