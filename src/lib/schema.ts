@@ -9,4 +9,5 @@ export const schema = z.object({
     .max(1000, 'The project description must be at most 1000 characters'),
   budget: z.string().optional(),
   timeline: z.string().optional(),
+  captcha: z.string().optional(),
 })

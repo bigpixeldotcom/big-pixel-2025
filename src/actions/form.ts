@@ -16,6 +16,27 @@ export async function submitForm(data: z.infer<typeof schema>) {
     throw new Error('Invalid form data')
   }
 
+  const verifyEndpoint = 'https://www.google.com/recaptcha/api/siteverify'
+
+  const secretKey = process.env.RECAPTCHA_SECRET!
+
+  const response = await fetch(verifyEndpoint, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: new URLSearchParams({
+      secret: secretKey,
+      response: result.data.recaptchaToken,
+    }),
+  })
+
+  const responseJson = await response.json()
+
+  if (!responseJson.success) {
+    throw new Error('Invalid reCAPTCHA token')
+  }
+
   try {
     const id = shortId()
     await notion.pages.create({
