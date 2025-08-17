@@ -16,19 +16,13 @@ export async function submitForm(data: z.infer<typeof schema>) {
     throw new Error('Invalid form data')
   }
 
-  const verifyEndpoint = 'https://www.google.com/recaptcha/api/siteverify'
+  const secret_key = process.env.RECAPTCHA_SECRET!
+  const response_key = result?.data?.captcha ?? ''
 
-  const secretKey = process.env.RECAPTCHA_SECRET!
+  const url = `https://www.google.com/recaptcha/api/siteverify?secret=${secret_key}&response=${response_key}`
 
-  const response = await fetch(verifyEndpoint, {
+  const response = await fetch(url, {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencoded',
-    },
-    body: new URLSearchParams({
-      secret: secretKey,
-      response: String(result?.data?.captcha ?? ''),
-    }),
   })
 
   const responseJson = await response.json()
