@@ -69,6 +69,7 @@ export default function ContactForm() {
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
               {/* Name Field */}
+              <Captcha ref={captchaRef} size="invisible" sitekey={process.env.NEXT_PUBLIC_CAPTCHA!} />
               <FormField
                 control={form.control}
                 name="name"
