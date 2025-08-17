@@ -10,21 +10,25 @@ export default function SecuritySpline() {
   const allowed = hasConsentFor('experience')
 
   if (!allowed) {
-    return (
-      <div className="h-full bg-spline-grey">
-        <div className="h-[240px] pt-12 md:h-[560px] lg:h-[720px] lg:pt-0">
-          <Image src="/big_pixel.jpg" fill style={{ objectFit: 'contain' }} alt="" priority />
-        </div>
-      </div>
-    )
+    return <FallbackImage />
   }
 
   return (
-    <div className="h-full bg-spline-grey">
-      <div className="h-[240px] pt-12 md:h-[560px] lg:h-[720px] lg:pt-0">
-        <Suspense fallback={<Image src="/big_pixel.jpg" fill alt="" priority />}>
-          <Spline scene="https://prod.spline.design/ybehSv5ckUz6V94i/scene.splinecode" />
-        </Suspense>
+    <Suspense fallback={<FallbackImage />}>
+      <div className="h-full bg-spline-grey">
+        <div className="relative h-[240px] pt-12 md:h-[560px] lg:h-[720px] lg:pt-0">
+          <Spline scene="/splines/big_pixel.spline" />
+        </div>
+      </div>
+    </Suspense>
+  )
+}
+
+function FallbackImage() {
+  return (
+    <div className="relative h-full bg-spline-grey">
+      <div className="relative h-[240px] pt-12 md:h-[560px] lg:h-[720px] lg:pt-0">
+        <Image src="/big_pixel.jpg" fill style={{ objectFit: 'contain' }} alt="" priority />
       </div>
     </div>
   )
