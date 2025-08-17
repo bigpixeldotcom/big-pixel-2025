@@ -14,7 +14,7 @@ export default function ScrollingSite() {
       },
     },
     onscreen: {
-      y: -1772,
+      y: '-76%',
       transition: {
         type: 'tween',
         duration: 4,
@@ -39,7 +39,7 @@ export default function ScrollingSite() {
             initial="offscreen"
             whileInView="onscreen"
             viewport={{ amount: 0.7 }}
-            className="relative mt-3 h-full w-full overflow-clip bg-white md:mt-6"
+            className="relative mt-3 h-full w-full overflow-clip bg-[#272d3e] md:mt-6"
           >
             <motion.div variants={scrollVariants} className="">
               <Image src="/work/calibre-homescroll.png" alt="" width={1024} height={2032} />
