@@ -23,7 +23,7 @@ export default function SecuritySpline() {
     <div className="h-full bg-spline-grey">
       <div className="h-[240px] pt-12 md:h-[560px] lg:h-[720px] lg:pt-0">
         <Suspense fallback={<Image src="/big_pixel.jpg" fill alt="" priority />}>
-          <Spline scene="/splines/big_pixel.spline" />
+          <Spline scene="https://prod.spline.design/ybehSv5ckUz6V94i/scene.splinecode" />
         </Suspense>
       </div>
     </div>

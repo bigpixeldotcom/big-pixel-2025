@@ -9,8 +9,8 @@ export default function SecuritySpline() {
 
   if (!allowed) {
     return (
-      <div className="h-full w-full">
-        <div className="mx-auto flex size-[540px] flex-col items-center justify-center">
+      <div className="size-80 md:size-[540px]">
+        <div className="mx-auto flex h-80 flex-col items-center justify-center md:h-[540px]">
           <p className="text-center">This interactive 3D content is blocked until you allow “experience” cookies.</p>
           <button
             onClick={() => consent.setIsPrivacyDialogOpen(true)}
@@ -26,7 +26,7 @@ export default function SecuritySpline() {
   return (
     <div className="size-80 md:size-[540px]">
       <div className="h-80 md:h-[540px]">
-        <Spline scene="/splines/security_cloud.spline" />
+        <Spline scene="https://prod.spline.design/ynGdwhDwq-8Un0Rw/scene.splinecode" />
       </div>
     </div>
   )
