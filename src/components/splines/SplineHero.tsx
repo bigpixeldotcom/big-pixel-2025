@@ -12,7 +12,7 @@ export default function SecuritySpline() {
   if (!allowed) {
     return (
       <div className="h-full bg-spline-grey">
-        <div className="relative h-[240px] md:h-[560px] lg:h-[720px]">
+        <div className="h-[240px] pt-12 md:h-[560px] lg:h-[720px] lg:pt-0">
           <Image src="/big_pixel.jpg" fill style={{ objectFit: 'contain' }} alt="" priority />
         </div>
       </div>

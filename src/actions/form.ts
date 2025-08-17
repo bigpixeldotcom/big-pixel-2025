@@ -3,6 +3,7 @@
 import { notion } from '@/lib/notion'
 import { schema } from '@/lib/schema'
 import { APIErrorCode, ClientErrorCode, isNotionClientError } from '@notionhq/client'
+import { checkBotId } from 'botid/server'
 import { z } from 'zod'
 
 function shortId() {
@@ -16,19 +17,14 @@ export async function submitForm(data: z.infer<typeof schema>) {
     throw new Error('Invalid form data')
   }
 
-  const secret_key = process.env.RECAPTCHA_SECRET!
-  const response_key = result?.data?.captcha ?? ''
-
-  const url = `https://www.google.com/recaptcha/api/siteverify?secret=${secret_key}&response=${response_key}`
-
-  const response = await fetch(url, {
-    method: 'POST',
+  const verification = await checkBotId({
+    developmentOptions: {
+      bypass: 'HUMAN', // To test error: 'BAD_BOT'
+    },
   })
 
-  const responseJson = await response.json()
-
-  if (!responseJson.success) {
-    throw new Error('Invalid reCAPTCHA token')
+  if (verification.isBot) {
+    throw new Error('Access denied')
   }
 
   try {
@@ -41,8 +37,8 @@ export async function submitForm(data: z.infer<typeof schema>) {
         name: { rich_text: [{ text: { content: result.data.name } }] },
         email: { email: result.data.email },
         description: { rich_text: [{ text: { content: result.data.description } }] },
-        budget: { select: { name: result.data.budget ?? '' } },
-        timeline: { select: { name: result.data.timeline ?? '' } },
+        budget: { rich_text: [{ text: { content: result.data.budget ?? '' } }] },
+        timeline: { rich_text: [{ text: { content: result.data.timeline ?? '' } }] },
       },
     })
     return { id }

@@ -10,13 +10,11 @@ import { Textarea } from '@/components/ui/textarea'
 import { schema } from '@/lib/schema'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { CircleCheck, CirclePoundSterling, CircleUserRound, Clock, Mail, Send } from 'lucide-react'
-import { useRef, useState } from 'react'
-import Captcha from 'react-google-recaptcha'
+import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 
 export default function ContactForm() {
-  const captchaRef = useRef<Captcha>(null)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [formSuccess, setFormSuccess] = useState(false)
 
@@ -28,7 +26,6 @@ export default function ContactForm() {
       description: '',
       budget: '',
       timeline: '',
-      captcha: '',
     },
   })
 
@@ -36,9 +33,7 @@ export default function ContactForm() {
 
   async function onSubmit(data: z.infer<typeof schema>) {
     setIsSubmitting(true)
-    const token = await captchaRef.current?.executeAsync()
-    const formData = { ...data, captcha: token ?? '' }
-    const result = await submitForm(formData)
+    const result = await submitForm(data)
     if (result && result.id) {
       setFormSuccess(true)
       reset()
@@ -69,7 +64,6 @@ export default function ContactForm() {
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
               {/* Name Field */}
-              <Captcha ref={captchaRef} size="invisible" sitekey={process.env.NEXT_PUBLIC_RECAPTCHA!} />
               <FormField
                 control={form.control}
                 name="name"
