@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Beston;Adrian;;;
+FN:Adrian Beston
+ORG:Big Pixel
+TITLE:Digital Architect
+TEL;TYPE=CELL,VOICE:+44 7415 853453
+EMAIL;TYPE=WORK:adrian@big-pixel.com
+URL:https://big-pixel.com
+ADR;TYPE=WORK:;;Big Pixel;Hardwick House;No 2 Agricultural Hall Plain;Norwich;;NR1 3FS;United Kingdom
+NOTE:Big Pixel — Web Design • Digital Development • Graphic Design
+END:VCARD
