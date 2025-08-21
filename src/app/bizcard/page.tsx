@@ -29,7 +29,7 @@ export default function About() {
                 Big Pixel
               </h1>
             </div>
-            <div className="flex flex-col-reverse items-center gap-6 lg:flex-row lg:gap-8">
+            <div className="flex flex-col-reverse items-start gap-6 lg:flex-row lg:gap-8">
               <div className="flex-grow">
                 <dl className="mb-12 flex w-full flex-col gap-4">
                   <div className="flex items-center gap-4">
@@ -37,35 +37,37 @@ export default function About() {
                       <FontAwesomeIcon icon={faFaceSmile} fixedWidth />
                       <span className="sr-only">Name</span>
                     </dt>
-                    <dd className="text-xl font-semibold">Adrian Beston</dd>
+                    <dd className="text-lg font-semibold sm:text-xl">Adrian Beston</dd>
                   </div>
                   <div className="flex items-center gap-4">
                     <dt className="flex size-10 items-center justify-center rounded bg-purple-50 text-xl text-white">
                       <FontAwesomeIcon icon={faPaperPlane} fixedWidth />
                       <span className="sr-only">Email</span>
                     </dt>
-                    <dd className="text-xl font-semibold">adrian@big-pixel.com</dd>
+                    <dd className="text-lg font-semibold sm:text-xl">adrian@big-pixel.com</dd>
                   </div>
                   <div className="flex items-center gap-4">
                     <dt className="flex size-10 items-center justify-center rounded bg-purple-50 text-xl text-white">
                       <FontAwesomeIcon icon={faMobileNotch} fixedWidth />
                       <span className="sr-only">Mobile</span>
                     </dt>
-                    <dd className="text-xl font-semibold">07415 853 453</dd>
+                    <dd className="text-lg font-semibold sm:text-xl">07415 853 453</dd>
                   </div>
                   <div className="flex items-center gap-4">
                     <dt className="flex size-10 items-center justify-center rounded bg-purple-50 text-xl text-white">
                       <FontAwesomeIcon icon={faPhoneOffice} fixedWidth />
                       <span className="sr-only">Office Telephone</span>
                     </dt>
-                    <dd className="text-xl font-semibold">01692 774 886</dd>
+                    <dd className="text-lg font-semibold sm:text-xl">01692 774 886</dd>
                   </div>
                   <div className="flex items-center gap-4">
                     <dt className="flex size-10 items-center justify-center rounded bg-purple-50 text-xl text-white">
                       <FontAwesomeIcon icon={faBuilding} fixedWidth />
                       <span className="sr-only">Address</span>
                     </dt>
-                    <dd className="text-xl font-semibold">Hardwick House, Agricultural Hall Plain, Norwich NR1 3FS</dd>
+                    <dd className="text-lg font-semibold sm:text-xl">
+                      Hardwick House, Agricultural Hall Plain, Norwich NR1 3FS
+                    </dd>
                   </div>
                 </dl>
                 <a
