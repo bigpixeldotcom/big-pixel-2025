@@ -1,4 +1,5 @@
 import '@/styles/base.css'
+import { Analytics } from '@vercel/analytics/next'
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 
@@ -97,6 +98,7 @@ export default function RootLayout({
 
           {children}
         </ConsentManagerProvider>
+        <Analytics />
       </body>
     </html>
   )
